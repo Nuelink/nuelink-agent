@@ -1,6 +1,6 @@
 # Examples Placeholder Guide
 
-All JSON files in this folder use token placeholders to avoid real or user-specific data.
+The JSON files in this folder use placeholder tokens instead of real user data.
 
 ## Common Tokens
 
@@ -18,4 +18,4 @@ All JSON files in this folder use token placeholders to avoid real or user-speci
 ## Usage
 
 - Replace tokens before running API calls in your environment.
-- Keep response samples schema-accurate while values remain placeholder-safe.
+- Keep the response structure accurate and only swap placeholder values.

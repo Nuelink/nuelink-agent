@@ -8,7 +8,7 @@ The format is based on Keep a Changelog, and this project follows Semantic Versi
 
 ### Added
 
-- Production repository scaffolding for docs-first skill maintenance.
+- Initial repository setup for maintaining and reviewing skills.
 - Governance docs: contributing guide and security policy.
 - CI workflow for markdown linting and skill validation.
 - Skill validator script to enforce frontmatter and structure requirements.

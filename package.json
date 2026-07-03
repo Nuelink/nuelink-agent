@@ -2,7 +2,7 @@
   "name": "nuelink-agent-skills",
   "version": "1.0.0",
   "private": true,
-  "description": "Production-ready skills repository for Nuelink CLI workflows.",
+  "description": "Skills repository for common Nuelink CLI workflows.",
   "type": "module",
   "scripts": {
     "validate": "node scripts/validate-skills.mjs",
