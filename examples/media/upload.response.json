@@ -1,0 +1,8 @@
+{
+  "status": "success",
+  "data": {
+    "id": "SAMPLE_MEDIA_ID",
+    "type": "image/jpeg",
+    "size": 102400
+  }
+}

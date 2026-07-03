@@ -1,0 +1,19 @@
+{
+  "title": "Sample Post Title",
+  "caption": "Sample post body used for documentation examples.",
+  "publishMode": "DRAFT",
+  "publishAt": null,
+  "media": [
+    {
+      "id": "SAMPLE_MEDIA_ID"
+    },
+    {
+      "url": "SAMPLE_MEDIA_URL"
+    }
+  ],
+  "platforms": {
+    "youtube": {
+      "tags": ["sample", "announcement", "social"]
+    }
+  }
+}

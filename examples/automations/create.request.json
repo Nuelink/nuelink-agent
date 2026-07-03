@@ -1,0 +1,10 @@
+{
+  "collectionId": "SAMPLE_COLLECTION_ID",
+  "feedUrl": "SAMPLE_FEED_URL",
+  "importAsType": "IMAGE",
+  "subType": "RSS",
+  "title": "Sample Feed Automation",
+  "type": "FEED",
+  "dynamicTitle": "{{title}}",
+  "dynamicBody": "New item: {title} {link}"
+}

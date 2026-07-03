@@ -1,0 +1,75 @@
+---
+name: nuelink-cli-posts
+description: List posts and create posts using JSON payloads or CLI options.
+---
+
+# Nuelink CLI Posts
+
+Use this skill to list and create posts in a collection.
+
+## List Posts
+
+```bash
+nuelink-cli posts --brand-id 13493 --collection-id 33273
+```
+
+## Create Post From JSON
+
+```bash
+nuelink-cli posts:add-json --brand-id 13493 --collection-id 33273 --payload ./post.json
+```
+
+Example `post.json`:
+
+```json
+{
+  "title": "CLI Post Title",
+  "caption": "Post body from CLI",
+  "publishMode": "DRAFT"
+}
+```
+
+API-style payload example from Postman:
+
+```json
+{
+  "title": "title here",
+  "caption": "body here as well",
+  "publishMode": "DRAFT",
+  "media": [
+    {
+      "id": "bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0"
+    }
+  ]
+}
+```
+
+## Create Post With CLI Flags
+
+```bash
+nuelink-cli posts:create \
+  --brand-id 13493 \
+  --collection-id 33273 \
+  --title "title here" \
+  --caption "body here" \
+  --publish-mode DRAFT \
+  --media-ids "media-id-1" \
+  --youtube-tags "tag1,tag2"
+```
+
+## Examples
+
+- Create request payload: `examples/posts/create.request.json`
+- List response payload: `examples/posts/list.response.json`
+
+## Expected API Results
+
+- List endpoint: `GET /api/public/v1/brands/:brand_id/collections/:collection_id/posts`
+- Create endpoint: `POST /api/public/v1/brands/:brand_id/collections/:collection_id/posts`
+- Success codes: `200` for list, `201` for create
+
+## Notes
+
+- Required for all post commands: `--brand-id`, `--collection-id`.
+- For `posts:add-json`, `--payload` must point to valid JSON.
+- `posts:create` supports many platform-specific flags.

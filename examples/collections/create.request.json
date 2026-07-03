@@ -1,0 +1,7 @@
+{
+  "title": "Sample Collection",
+  "description": "Collection used for documentation examples",
+  "maxRepublish": 5,
+  "channels": ["SAMPLE_CHANNEL_ID", "SAMPLE_CHANNEL_ID_2"],
+  "queues": ["Mon 10:10", "Wed 12:12", "Fri 11:12"]
+}

@@ -1,0 +1,1577 @@
+{
+  "info": {
+    "_postman_id": "342058cb-e220-4848-93da-0021c8720bbd",
+    "name": "Nuelink External API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24848319",
+    "_collection_link": "https://go.postman.co/collection/24848319-342058cb-e220-4848-93da-0021c8720bbd?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "profile",
+      "item": [
+        {
+          "name": "me",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://nuelink.com/api/public/v1/me",
+              "protocol": "https",
+              "host": [
+                "nuelink",
+                "com"
+              ],
+              "path": [
+                "api",
+                "public",
+                "v1",
+                "me"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "me",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://nuelink.com/api/public/v1/me",
+                  "protocol": "https",
+                  "host": [
+                    "nuelink",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "public",
+                    "v1",
+                    "me"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 17 Apr 2026 05:58:51 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "30"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "29"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "60"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, accept-encoding"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "9ed933488b50e3bc-LIS"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"name\": \"Abdelkarim Chamlal\",\n        \"joinedAt\": \"2022-05-23T23:55:51.000000Z\",\n        \"timezone\": \"Europe/London\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "brands",
+      "item": [
+        {
+          "name": "brands",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://nuelink.com/api/public/v1/brands?per_page=5&page=1",
+              "protocol": "https",
+              "host": [
+                "nuelink",
+                "com"
+              ],
+              "path": [
+                "api",
+                "public",
+                "v1",
+                "brands"
+              ],
+              "query": [
+                {
+                  "key": "per_page",
+                  "value": "5"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "brands",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://nuelink.com/api/public/v1/brands?per_page=5&page=1",
+                  "protocol": "https",
+                  "host": [
+                    "nuelink",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "public",
+                    "v1",
+                    "brands"
+                  ],
+                  "query": [
+                    {
+                      "key": "per_page",
+                      "value": "5"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 17 Apr 2026 05:59:00 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "30"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "28"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "51"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, accept-encoding"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "9ed933817e11e3bc-LIS"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 13493,\n            \"title\": \"new brand\",\n            \"description\": \"new brand\",\n            \"timezone\": \"Europe/London\",\n            \"createdAt\": \"2023-07-20T13:05:31.000000Z\",\n            \"updatedAt\": \"2026-04-15T13:45:23.000000Z\"\n        },\n        {\n            \"id\": 9682,\n            \"title\": \"zapier\",\n            \"description\": \"zapier\",\n            \"timezone\": \"Europe/London\",\n            \"createdAt\": \"2023-05-16T10:42:28.000000Z\",\n            \"updatedAt\": \"2026-03-30T01:07:43.000000Z\"\n        },\n        {\n            \"id\": 9548,\n            \"title\": \"Meta\",\n            \"description\": \"Meta\",\n            \"timezone\": \"Europe/London\",\n            \"createdAt\": \"2023-05-08T08:01:56.000000Z\",\n            \"updatedAt\": \"2026-03-30T01:07:43.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"Another One\",\n            \"description\": \"Another One\",\n            \"timezone\": \"Europe/London\",\n            \"createdAt\": \"2022-09-29T13:57:33.000000Z\",\n            \"updatedAt\": \"2026-03-30T01:07:43.000000Z\"\n        },\n        {\n            \"id\": 1,\n            \"title\": \"Abdelkarim Chamlal\",\n            \"description\": \"Abdelkarim Chamlal\",\n            \"timezone\": \"Europe/London\",\n            \"createdAt\": \"2022-09-14T09:40:06.000000Z\",\n            \"updatedAt\": \"2026-03-30T01:07:43.000000Z\"\n        }\n    ],\n    \"pagination\": {\n        \"currentPage\": 1,\n        \"perPage\": 5,\n        \"total\": 5,\n        \"lastPage\": 1,\n        \"nextPageUrl\": null,\n        \"prevPageUrl\": null\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "collections",
+      "item": [
+        {
+          "name": "collections",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://nuelink.com/api/public/v1/brands/:brand_id/collections?page=1&per_page=5",
+              "protocol": "https",
+              "host": [
+                "nuelink",
+                "com"
+              ],
+              "path": [
+                "api",
+                "public",
+                "v1",
+                "brands",
+                ":brand_id",
+                "collections"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "per_page",
+                  "value": "5"
+                }
+              ],
+              "variable": [
+                {
+                  "key": "brand_id",
+                  "value": "13493"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "collections",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://nuelink.com/api/public/v1/brands/:brand_id/collections?page=1&per_page=5",
+                  "protocol": "https",
+                  "host": [
+                    "nuelink",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "public",
+                    "v1",
+                    "brands",
+                    ":brand_id",
+                    "collections"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "5"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "brand_id",
+                      "value": "13493"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 17 Apr 2026 05:59:19 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "30"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "27"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "32"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, accept-encoding"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "9ed933f84808e3bc-LIS"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 98843,\n            \"title\": \"API Brand\",\n            \"description\": \"API Brand\",\n            \"createdAt\": \"2026-04-08T09:46:21.000000Z\",\n            \"updatedAt\": \"2026-04-08T09:46:21.000000Z\",\n            \"channels\": []\n        },\n        {\n            \"id\": 40656,\n            \"title\": \"iron man\",\n            \"description\": \"iron man\",\n            \"createdAt\": \"2023-09-19T13:45:26.000000Z\",\n            \"updatedAt\": \"2025-02-23T10:11:16.000000Z\",\n            \"channels\": [\n                {\n                    \"id\": 60111,\n                    \"name\": \"Abdelkarim\",\n                    \"type\": \"X\"\n                },\n                {\n                    \"id\": 60112,\n                    \"name\": \"insta.kreatinc\",\n                    \"type\": \"Instagram\"\n                }\n            ]\n        },\n        {\n            \"id\": 33273,\n            \"title\": \"Draft\",\n            \"description\": \"Draft collection\",\n            \"createdAt\": \"2023-07-20T13:05:31.000000Z\",\n            \"updatedAt\": \"2025-02-22T21:20:36.000000Z\",\n            \"channels\": []\n        }\n    ],\n    \"pagination\": {\n        \"currentPage\": 1,\n        \"perPage\": 5,\n        \"total\": 3,\n        \"lastPage\": 1,\n        \"nextPageUrl\": null,\n        \"prevPageUrl\": null\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "create collection",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"darba\",\r\n    \"description\": \"the best in the west\",\r\n    \"maxRepublish\": 5,\r\n    \"channels\": [300294, 60112, 5],\r\n    \"queues\": [\"Mon 10:10\", \"Mon 12:12\", \"Mon 11:12\", \"Mon 12:15\"]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://nuelink.com/api/public/v1/brands/:brand_id/collections",
+              "protocol": "https",
+              "host": [
+                "nuelink",
+                "com"
+              ],
+              "path": [
+                "api",
+                "public",
+                "v1",
+                "brands",
+                ":brand_id",
+                "collections"
+              ],
+              "variable": [
+                {
+                  "key": "brand_id",
+                  "value": "13493"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "collections",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://nuelink.com/api/public/v1/brands/:brand_id/collections?page=1&per_page=5",
+                  "protocol": "https",
+                  "host": [
+                    "nuelink",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "public",
+                    "v1",
+                    "brands",
+                    ":brand_id",
+                    "collections"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "5"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "brand_id",
+                      "value": "13493"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 17 Apr 2026 05:59:19 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "30"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "27"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "32"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, accept-encoding"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "9ed933f84808e3bc-LIS"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 98843,\n            \"title\": \"API Brand\",\n            \"description\": \"API Brand\",\n            \"createdAt\": \"2026-04-08T09:46:21.000000Z\",\n            \"updatedAt\": \"2026-04-08T09:46:21.000000Z\",\n            \"channels\": []\n        },\n        {\n            \"id\": 40656,\n            \"title\": \"iron man\",\n            \"description\": \"iron man\",\n            \"createdAt\": \"2023-09-19T13:45:26.000000Z\",\n            \"updatedAt\": \"2025-02-23T10:11:16.000000Z\",\n            \"channels\": [\n                {\n                    \"id\": 60111,\n                    \"name\": \"Abdelkarim\",\n                    \"type\": \"X\"\n                },\n                {\n                    \"id\": 60112,\n                    \"name\": \"insta.kreatinc\",\n                    \"type\": \"Instagram\"\n                }\n            ]\n        },\n        {\n            \"id\": 33273,\n            \"title\": \"Draft\",\n            \"description\": \"Draft collection\",\n            \"createdAt\": \"2023-07-20T13:05:31.000000Z\",\n            \"updatedAt\": \"2025-02-22T21:20:36.000000Z\",\n            \"channels\": []\n        }\n    ],\n    \"pagination\": {\n        \"currentPage\": 1,\n        \"perPage\": 5,\n        \"total\": 3,\n        \"lastPage\": 1,\n        \"nextPageUrl\": null,\n        \"prevPageUrl\": null\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "automations",
+      "item": [
+        {
+          "name": "automations",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://nuelink.com/api/public/v1/brands/:brand_id/automations",
+              "protocol": "https",
+              "host": [
+                "nuelink",
+                "com"
+              ],
+              "path": [
+                "api",
+                "public",
+                "v1",
+                "brands",
+                ":brand_id",
+                "automations"
+              ],
+              "variable": [
+                {
+                  "key": "brand_id",
+                  "value": "6"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "automations",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://nuelink.com/api/public/v1/brands/:brand_id/automations",
+                  "protocol": "https",
+                  "host": [
+                    "nuelink",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "public",
+                    "v1",
+                    "brands",
+                    ":brand_id",
+                    "automations"
+                  ],
+                  "variable": [
+                    {
+                      "key": "brand_id",
+                      "value": "6"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 29 Jun 2026 15:20:32 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "30"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "28"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "39"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, accept-encoding"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a135ea738afae18d-MRS"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 21682,\n            \"title\": \"NASA Breaking News\",\n            \"description\": \"NASA Breaking News RSS Automation\",\n            \"collectionId\": 720,\n            \"status\": \"ACTIVE\",\n            \"subType\": \"RSS\",\n            \"feedUrl\": \"https://www.nasa.gov/rss/dyn/breaking_news.rss\",\n            \"runCount\": 0,\n            \"importAsType\": \"IMAGE\",\n            \"lastRun\": 0,\n            \"dynamicTitle\": \"{{title}}\",\n            \"dynamicBody\": \"🚀 {title} 👉 {link}\",\n            \"createdAt\": \"2026-06-29T14:24:13.000000Z\",\n            \"updatedAt\": \"2026-06-29T14:24:13.000000Z\"\n        },\n        {\n            \"id\": 21681,\n            \"title\": \"NASA Breaking News\",\n            \"description\": null,\n            \"collectionId\": 720,\n            \"status\": \"ACTIVE\",\n            \"subType\": \"RSS\",\n            \"feedUrl\": \"https://www.nasa.gov/rss/dyn/breaking_news.rss\",\n            \"runCount\": 0,\n            \"importAsType\": \"IMAGE\",\n            \"lastRun\": 0,\n            \"dynamicTitle\": \"{{title}}\",\n            \"dynamicBody\": \"🚀 {title} 👉 {link}\",\n            \"createdAt\": \"2026-06-29T14:21:08.000000Z\",\n            \"updatedAt\": \"2026-06-29T14:21:08.000000Z\"\n        },\n        {\n            \"id\": 21680,\n            \"title\": \"NASA Breaking News\",\n            \"description\": null,\n            \"collectionId\": 720,\n            \"status\": \"ACTIVE\",\n            \"subType\": \"RSS\",\n            \"feedUrl\": \"https://www.nasa.gov/rss/dyn/breaking_news.rss\",\n            \"runCount\": 0,\n            \"importAsType\": \"IMAGE\",\n            \"lastRun\": 0,\n            \"dynamicTitle\": \"{{title}}\",\n            \"dynamicBody\": \"🚀 {title} 👉 {link}\",\n            \"createdAt\": \"2026-06-29T14:19:17.000000Z\",\n            \"updatedAt\": \"2026-06-29T14:19:17.000000Z\"\n        },\n        {\n            \"id\": 367,\n            \"title\": \"Shop - Melula\",\n            \"description\": \"Squarespace Shop Automation\",\n            \"collectionId\": 715,\n            \"status\": \"ACTIVE\",\n            \"subType\": \"SQUARESPACESHOP\",\n            \"feedUrl\": \"https://www.melula.com/shop?format=rss\",\n            \"runCount\": 2133,\n            \"importAsType\": \"IMAGE\",\n            \"lastRun\": 1782735298,\n            \"dynamicTitle\": \"{{title}}\",\n            \"dynamicBody\": \"Check out my latest blog article:  {title}  👉🏽👉🏽 {link}\",\n            \"createdAt\": \"2022-10-18T09:54:08.000000Z\",\n            \"updatedAt\": \"2026-06-29T12:14:58.000000Z\"\n        },\n        {\n            \"id\": 364,\n            \"title\": \"Shop - Melula\",\n            \"description\": \"Squarespace Shop Automation\",\n            \"collectionId\": 712,\n            \"status\": \"ACTIVE\",\n            \"subType\": \"SQUARESPACESHOP\",\n            \"feedUrl\": \"https://www.melula.com/shop?format=rss\",\n            \"runCount\": 2133,\n            \"importAsType\": \"IMAGE\",\n            \"lastRun\": 1782735297,\n            \"dynamicTitle\": \"{{title}}\",\n            \"dynamicBody\": \"Check out my latest blog article:  {title}  👉🏽👉🏽 {link}\",\n            \"createdAt\": \"2022-10-18T09:43:23.000000Z\",\n            \"updatedAt\": \"2026-06-29T12:14:58.000000Z\"\n        }\n    ],\n    \"pagination\": {\n        \"currentPage\": 1,\n        \"perPage\": 25,\n        \"total\": 5,\n        \"lastPage\": 1,\n        \"nextPageUrl\": null,\n        \"prevPageUrl\": null\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "create automation",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"collectionId\": 720,\r\n  \"feedUrl\": \"https://www.nasa.gov/rss/dyn/breaking_news.rss\",\r\n  \"importAsType\": \"IMAGE\",\r\n  \"subType\": \"RSS\",\r\n  \"title\": \"NASA Breaking News\",\r\n  \"type\": \"FEED\",\r\n  \"dynamicTitle\": \"{{title}}\",\r\n  \"dynamicBody\": \"🚀 {title} 👉 {link}\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://nuelink.com/api/public/v1/brands/:brand_id/automations",
+              "protocol": "https",
+              "host": [
+                "nuelink",
+                "com"
+              ],
+              "path": [
+                "api",
+                "public",
+                "v1",
+                "brands",
+                ":brand_id",
+                "automations"
+              ],
+              "variable": [
+                {
+                  "key": "brand_id",
+                  "value": "6"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "channels",
+      "item": [
+        {
+          "name": "channels",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://nuelink.com/api/public/v1/brands/:brand_id/channels?per_page=5&page=1",
+              "protocol": "https",
+              "host": [
+                "nuelink",
+                "com"
+              ],
+              "path": [
+                "api",
+                "public",
+                "v1",
+                "brands",
+                ":brand_id",
+                "channels"
+              ],
+              "query": [
+                {
+                  "key": "per_page",
+                  "value": "5"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ],
+              "variable": [
+                {
+                  "key": "brand_id",
+                  "value": "13493"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "channels",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://nuelink.com/api/public/v1/brands/:brand_id/channels?per_page=5&page=1",
+                  "protocol": "https",
+                  "host": [
+                    "nuelink",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "public",
+                    "v1",
+                    "brands",
+                    ":brand_id",
+                    "channels"
+                  ],
+                  "query": [
+                    {
+                      "key": "per_page",
+                      "value": "5"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "brand_id",
+                      "value": "13493"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 17 Apr 2026 05:59:34 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "30"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "26"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "17"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, accept-encoding"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "9ed93455e99ee3bc-LIS"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 299664,\n            \"name\": \"nuelink-signups\",\n            \"status\": \"ACTIVE\",\n            \"type\": \"Social Media\",\n            \"createdAt\": \"2026-04-16T10:32:53.000000Z\",\n            \"updatedAt\": \"2026-04-16T10:32:53.000000Z\"\n        },\n        {\n            \"id\": 60112,\n            \"name\": \"insta.kreatinc\",\n            \"status\": \"INACTIVE\",\n            \"type\": \"Instagram\",\n            \"createdAt\": \"2023-08-10T11:39:10.000000Z\",\n            \"updatedAt\": \"2025-04-06T11:00:17.000000Z\"\n        },\n        {\n            \"id\": 60111,\n            \"name\": \"Abdelkarim\",\n            \"status\": \"INACTIVE\",\n            \"type\": \"X\",\n            \"createdAt\": \"2023-08-10T11:38:53.000000Z\",\n            \"updatedAt\": \"2026-01-06T10:55:07.000000Z\"\n        },\n        {\n            \"id\": 60107,\n            \"name\": \"Said lmadani\",\n            \"status\": \"INACTIVE\",\n            \"type\": \"Facebook\",\n            \"createdAt\": \"2023-08-10T11:38:08.000000Z\",\n            \"updatedAt\": \"2025-04-06T11:00:17.000000Z\"\n        },\n        {\n            \"id\": 60108,\n            \"name\": \"Kreatinc test\",\n            \"status\": \"INACTIVE\",\n            \"type\": \"Facebook\",\n            \"createdAt\": \"2023-08-10T11:38:08.000000Z\",\n            \"updatedAt\": \"2025-04-06T11:00:17.000000Z\"\n        }\n    ],\n    \"pagination\": {\n        \"currentPage\": 1,\n        \"perPage\": 5,\n        \"total\": 8,\n        \"lastPage\": 2,\n        \"nextPageUrl\": \"https://nuelink.com/api/public/v1/brands/13493/channels?page=2\",\n        \"prevPageUrl\": null\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "media",
+      "item": [
+        {
+          "name": "upload media",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "media",
+                  "type": "file",
+                  "uuid": "a5a28106-1dcc-4367-9c6a-c8eab5844045",
+                  "src": "/C:/Users/abdel/Downloads/media-app_2_c07ae19a655f40bbb88b1142931be45434fe4b4760adba303edede322f91b4a8_compressed_1.mp4"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://nuelink.com/api/public/v1/brands/:brand_id/media",
+              "protocol": "https",
+              "host": [
+                "nuelink",
+                "com"
+              ],
+              "path": [
+                "api",
+                "public",
+                "v1",
+                "brands",
+                ":brand_id",
+                "media"
+              ],
+              "variable": [
+                {
+                  "key": "brand_id",
+                  "value": "13493"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "upload media",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "media",
+                      "type": "file",
+                      "uuid": "a5a28106-1dcc-4367-9c6a-c8eab5844045",
+                      "src": "/C:/Users/abdel/Downloads/aishot-2215.jpg"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "https://nuelink.com/api/public/v1/brands/:brand_id/media",
+                  "protocol": "https",
+                  "host": [
+                    "nuelink",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "public",
+                    "v1",
+                    "brands",
+                    ":brand_id",
+                    "media"
+                  ],
+                  "variable": [
+                    {
+                      "key": "brand_id",
+                      "value": "13493"
+                    }
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 201
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 17 Apr 2026 05:59:56 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "30"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "29"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "58"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "9ed934cbff2be3bc-LIS"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": \"bWVkaWEvcmo2dzRhSVY4YUJOMWJoU3c4U2t6VEJOenVXcjRoTmsuanBn\",\n        \"type\": \"image/jpeg\",\n        \"size\": 4587311\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "list media",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://nuelink.com/api/public/v1/brands/:brand_id/media",
+              "protocol": "https",
+              "host": [
+                "nuelink",
+                "com"
+              ],
+              "path": [
+                "api",
+                "public",
+                "v1",
+                "brands",
+                ":brand_id",
+                "media"
+              ],
+              "variable": [
+                {
+                  "key": "brand_id",
+                  "value": "6"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "list media",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "https://nuelink.com/api/public/v1/brands/:brand_id/media",
+                  "protocol": "https",
+                  "host": [
+                    "nuelink",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "public",
+                    "v1",
+                    "brands",
+                    ":brand_id",
+                    "media"
+                  ],
+                  "variable": [
+                    {
+                      "key": "brand_id",
+                      "value": "6"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 29 Jun 2026 15:18:47 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "30"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "28"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "53"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, accept-encoding"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a135e7df2dafe18d-MRS"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 37326956,\n            \"name\": \"test-image.png\",\n            \"type\": \"image/png\",\n            \"size\": 70,\n            \"createdAt\": \"2026-04-24T11:04:27.000000Z\",\n            \"updatedAt\": \"2026-04-24T11:09:44.000000Z\"\n        },\n        {\n            \"id\": 37326928,\n            \"name\": \"test-image.png\",\n            \"type\": \"image/png\",\n            \"size\": 70,\n            \"createdAt\": \"2026-04-24T11:03:50.000000Z\",\n            \"updatedAt\": \"2026-04-24T11:09:42.000000Z\"\n        },\n        {\n            \"id\": 37326725,\n            \"name\": \"2.jpg\",\n            \"type\": \"image/jpeg\",\n            \"size\": 308,\n            \"createdAt\": \"2026-04-24T10:56:31.000000Z\",\n            \"updatedAt\": \"2026-04-24T10:58:01.000000Z\"\n        },\n        {\n            \"id\": 34337143,\n            \"name\": null,\n            \"type\": \"image/png\",\n            \"size\": 312369,\n            \"createdAt\": \"2026-01-22T10:52:07.000000Z\",\n            \"updatedAt\": \"2026-06-11T20:26:49.000000Z\"\n        },\n        {\n            \"id\": 34337032,\n            \"name\": \"thumb_1024.jpg\",\n            \"type\": \"image/jpeg\",\n            \"size\": 91857,\n            \"createdAt\": \"2026-01-22T10:47:45.000000Z\",\n            \"updatedAt\": \"2026-06-16T12:31:05.000000Z\"\n        },\n        {\n            \"id\": 34337031,\n            \"name\": \"nuelink.png filenameUTF-8nuelink.png\",\n            \"type\": \"image/png\",\n            \"size\": 362322,\n            \"createdAt\": \"2026-01-22T10:47:45.000000Z\",\n            \"updatedAt\": \"2026-06-16T12:31:07.000000Z\"\n        },\n        {\n            \"id\": 34337021,\n            \"name\": \"Nuelink_Default_CSV_Template__MAKE_A_COPY__-_1680055249.csv\",\n            \"type\": \"text/csv\",\n            \"size\": 1024,\n            \"createdAt\": \"2026-01-22T10:47:28.000000Z\",\n            \"updatedAt\": \"2026-01-22T10:47:49.000000Z\"\n        },\n        {\n            \"id\": 34336949,\n            \"name\": \"Scarf_Care_and_Styling_Tips_3_-_Sheet1.csv\",\n            \"type\": \"text/csv\",\n            \"size\": 45862,\n            \"createdAt\": \"2026-01-22T10:35:35.000000Z\",\n            \"updatedAt\": \"2026-01-22T10:37:55.000000Z\"\n        },\n        {\n            \"id\": 33919415,\n            \"name\": \"etudiant-ecole-nationale-sciences-appliquees-tetouan-specialise-genie-informatique.jpg\",\n            \"type\": \"image/jpeg\",\n            \"size\": 129935,\n            \"createdAt\": \"2026-01-08T15:02:08.000000Z\",\n            \"updatedAt\": \"2026-01-08T15:16:07.000000Z\"\n        },\n        {\n            \"id\": 33919411,\n            \"name\": \"MOROCCAN-ARABS-IN-NORTH-AMERICA.jpg\",\n            \"type\": \"image/jpeg\",\n            \"size\": 26200,\n            \"createdAt\": \"2026-01-08T15:02:07.000000Z\",\n            \"updatedAt\": \"2026-01-08T15:16:06.000000Z\"\n        },\n        {\n            \"id\": 33044205,\n            \"name\": \"Img-1-page1.jpg\",\n            \"type\": \"image/jpeg\",\n            \"size\": 41107,\n            \"createdAt\": \"2025-12-11T16:16:39.000000Z\",\n            \"updatedAt\": \"2026-01-08T14:31:29.000000Z\"\n        },\n        {\n            \"id\": 33044190,\n            \"name\": \"back-image-1.jpg\",\n            \"type\": \"image/jpeg\",\n            \"size\": 113866,\n            \"createdAt\": \"2025-12-11T16:15:59.000000Z\",\n            \"updatedAt\": \"2026-01-08T14:31:28.000000Z\"\n        },\n        {\n            \"id\": 32280918,\n            \"name\": \"5220279-hd_1920_1080_25fps.mp4\",\n            \"type\": \"video/mp4\",\n            \"size\": 8980318,\n            \"createdAt\": \"2025-11-19T10:08:35.000000Z\",\n            \"updatedAt\": \"2025-11-19T10:29:18.000000Z\"\n        },\n        {\n            \"id\": 22834135,\n            \"name\": \"bec93fee93fb6e2cb614ece53f093799.mp4\",\n            \"type\": \"video/mp4\",\n            \"size\": 14621739,\n            \"createdAt\": \"2025-04-08T09:01:50.000000Z\",\n            \"updatedAt\": \"2025-04-08T09:13:50.000000Z\"\n        },\n        {\n            \"id\": 20970440,\n            \"name\": \"IfnU2cHC5C8pssZ8HqvbMTVeMf82LLTCYGxl.mp4\",\n            \"type\": \"video/mp4\",\n            \"size\": 6068437,\n            \"createdAt\": \"2025-03-21T15:38:00.000000Z\",\n            \"updatedAt\": \"2025-03-22T02:27:24.000000Z\"\n        },\n        {\n            \"id\": 20534361,\n            \"name\": null,\n            \"type\": \"image/jpeg\",\n            \"size\": 0,\n            \"createdAt\": \"2025-03-20T12:50:31.000000Z\",\n            \"updatedAt\": \"2026-06-13T14:38:33.000000Z\"\n        },\n        {\n            \"id\": 18448706,\n            \"name\": null,\n            \"type\": \"image/jpeg\",\n            \"size\": 159154,\n            \"createdAt\": \"2025-03-14T13:43:28.000000Z\",\n            \"updatedAt\": \"2026-06-15T21:54:31.000000Z\"\n        },\n        {\n            \"id\": 18448703,\n            \"name\": null,\n            \"type\": \"image/jpeg\",\n            \"size\": 220799,\n            \"createdAt\": \"2025-03-14T13:43:26.000000Z\",\n            \"updatedAt\": \"2026-05-28T19:38:34.000000Z\"\n        },\n        {\n            \"id\": 18448635,\n            \"name\": null,\n            \"type\": \"image/jpeg\",\n            \"size\": 111225,\n            \"createdAt\": \"2025-03-14T13:42:43.000000Z\",\n            \"updatedAt\": \"2026-06-15T21:54:33.000000Z\"\n        },\n        {\n            \"id\": 18448631,\n            \"name\": null,\n            \"type\": \"image/jpeg\",\n            \"size\": 160240,\n            \"createdAt\": \"2025-03-14T13:42:40.000000Z\",\n            \"updatedAt\": \"2026-05-28T19:38:31.000000Z\"\n        },\n        {\n            \"id\": 18448562,\n            \"name\": null,\n            \"type\": \"image/jpeg\",\n            \"size\": 51625,\n            \"createdAt\": \"2025-03-14T13:41:59.000000Z\",\n            \"updatedAt\": \"2026-06-15T21:54:33.000000Z\"\n        },\n        {\n            \"id\": 18448561,\n            \"name\": null,\n            \"type\": \"image/jpeg\",\n            \"size\": 152028,\n            \"createdAt\": \"2025-03-14T13:41:58.000000Z\",\n            \"updatedAt\": \"2026-05-28T19:38:32.000000Z\"\n        },\n        {\n            \"id\": 18448560,\n            \"name\": null,\n            \"type\": \"image/jpeg\",\n            \"size\": 152028,\n            \"createdAt\": \"2025-03-14T13:41:58.000000Z\",\n            \"updatedAt\": \"2026-05-28T19:38:32.000000Z\"\n        },\n        {\n            \"id\": 18448513,\n            \"name\": null,\n            \"type\": \"image/jpeg\",\n            \"size\": 161990,\n            \"createdAt\": \"2025-03-14T13:41:17.000000Z\",\n            \"updatedAt\": \"2026-06-15T21:54:31.000000Z\"\n        },\n        {\n            \"id\": 18448512,\n            \"name\": null,\n            \"type\": \"image/jpeg\",\n            \"size\": 161990,\n            \"createdAt\": \"2025-03-14T13:41:17.000000Z\",\n            \"updatedAt\": \"2026-06-15T21:54:31.000000Z\"\n        }\n    ],\n    \"pagination\": {\n        \"currentPage\": 1,\n        \"perPage\": 25,\n        \"total\": 274,\n        \"lastPage\": 11,\n        \"nextPageUrl\": \"https://nuelink.com/api/public/v1/brands/6/media?page=2\",\n        \"prevPageUrl\": null\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "posts",
+      "item": [
+        {
+          "name": "index posts",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://nuelink.com/api/public/v1/brands/:brand_id/collections/:collection_id/posts",
+              "protocol": "https",
+              "host": [
+                "nuelink",
+                "com"
+              ],
+              "path": [
+                "api",
+                "public",
+                "v1",
+                "brands",
+                ":brand_id",
+                "collections",
+                ":collection_id",
+                "posts"
+              ],
+              "variable": [
+                {
+                  "key": "brand_id",
+                  "value": "13493"
+                },
+                {
+                  "key": "collection_id",
+                  "value": "98843"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "index posts",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://nuelink.com/api/public/v1/brands/:brand_id/collections/:collection_id/posts",
+                  "protocol": "https",
+                  "host": [
+                    "nuelink",
+                    "com"
+                  ],
+                  "path": [
+                    "api",
+                    "public",
+                    "v1",
+                    "brands",
+                    ":brand_id",
+                    "collections",
+                    ":collection_id",
+                    "posts"
+                  ],
+                  "variable": [
+                    {
+                      "key": "brand_id",
+                      "value": "13493"
+                    },
+                    {
+                      "key": "collection_id",
+                      "value": "98843"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": ":status",
+                  "value": 200
+                },
+                {
+                  "key": "date",
+                  "value": "Mon, 29 Jun 2026 13:28:27 GMT"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "server",
+                  "value": "cloudflare"
+                },
+                {
+                  "key": "cache-control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "x-ratelimit-limit",
+                  "value": "30"
+                },
+                {
+                  "key": "x-ratelimit-remaining",
+                  "value": "29"
+                },
+                {
+                  "key": "x-ratelimit-reset",
+                  "value": "60"
+                },
+                {
+                  "key": "vary",
+                  "value": "Origin, accept-encoding"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "strict-transport-security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "key": "content-encoding",
+                  "value": "gzip"
+                },
+                {
+                  "key": "cf-cache-status",
+                  "value": "DYNAMIC"
+                },
+                {
+                  "key": "cf-ray",
+                  "value": "a135463e998a2a48-MRS"
+                },
+                {
+                  "key": "alt-svc",
+                  "value": "h3=\":443\"; ma=86400"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 4439073,\n            \"title\": null,\n            \"body\": \"Preserve your collection with the Legend Vinyl LV6. Precision engineering for serious collectors. #LegendVinyl\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvMXNsYXpSbmJVRHBVY3czazNubjd0Y3p3WG1MSEEycVkuanBn\"\n                }\n            ],\n            \"postType\": \"IMAGE\",\n            \"postingType\": \"SCHEDULE\",\n            \"status\": \"PUBLISHED\",\n            \"postDate\": \"2026-05-12 14:00:00\",\n            \"createdAt\": \"2026-05-11T08:59:13.000000Z\",\n            \"updatedAt\": \"2026-05-12T14:00:53.000000Z\"\n        },\n        {\n            \"id\": 4429317,\n            \"title\": \"title here\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvMXNsYXpSbmJVRHBVY3czazNubjd0Y3p3WG1MSEEycVkuanBn\"\n                },\n                {\n                    \"id\": \"bWVkaWEvWGJINTVVNTdmMmo3OFQ3dDMzWnA2ajBENktUTExTMWEuanBn\"\n                }\n            ],\n            \"postType\": \"POLL\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-05-08T09:10:34.000000Z\",\n            \"updatedAt\": \"2026-05-08T09:10:34.000000Z\",\n            \"poll\": {\n                \"caption\": \"testing multiple images\",\n                \"question\": \"what is the new role?\",\n                \"options\": [\n                    \"iron\",\n                    \"dudee\"\n                ],\n                \"period\": \"3d\",\n                \"correctOptionIndex\": 1,\n                \"explanation\": \"iwa ash idir lwaaa7ad\"\n            }\n        },\n        {\n            \"id\": 4429247,\n            \"title\": \"title here\",\n            \"body\": \"{\\\"linkedin_caption\\\":\\\"testing multiple images\\\",\\\"tweet\\\":\\\"what is the new role?\\\",\\\"options\\\":[\\\"iron\\\",\\\"dudee\\\"],\\\"period\\\":4320,\\\"correct\\\":1,\\\"explanation\\\":\\\"iwa ash idir lwaaa7ad\\\"}\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvMXNsYXpSbmJVRHBVY3czazNubjd0Y3p3WG1MSEEycVkuanBn\"\n                },\n                {\n                    \"id\": \"bWVkaWEvWGJINTVVNTdmMmo3OFQ3dDMzWnA2ajBENktUTExTMWEuanBn\"\n                }\n            ],\n            \"postType\": \"STORY\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-05-08T08:44:29.000000Z\",\n            \"updatedAt\": \"2026-05-08T08:44:29.000000Z\"\n        },\n        {\n            \"id\": 4364709,\n            \"title\": \"Product Launch Post\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"POLL\",\n            \"postingType\": \"SCHEDULE\",\n            \"status\": \"PENDING\",\n            \"postDate\": \"2026-10-10 11:12:00\",\n            \"createdAt\": \"2026-04-20T15:23:05.000000Z\",\n            \"updatedAt\": \"2026-04-20T15:23:05.000000Z\",\n            \"poll\": {\n                \"caption\": \"We are excited to share our latest product update with you all! Check out the details in the link.\",\n                \"question\": \"What feature should we build next?\",\n                \"options\": [\n                    \"Dark Mode\",\n                    \"Custom Dashboards\"\n                ],\n                \"period\": \"1d\",\n                \"correctOptionIndex\": 1,\n                \"explanation\": \"We want to prioritize what our community values the most.\"\n            }\n        },\n        {\n            \"id\": 4354980,\n            \"title\": \"Product Launch Post\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"POLL\",\n            \"postingType\": \"SCHEDULE\",\n            \"status\": \"PENDING\",\n            \"postDate\": \"2026-10-10 11:12:00\",\n            \"createdAt\": \"2026-04-17T12:17:57.000000Z\",\n            \"updatedAt\": \"2026-04-17T12:17:57.000000Z\",\n            \"poll\": {\n                \"caption\": \"We are excited to share our latest product update with you all! Check out the details in the link.\",\n                \"question\": \"What feature should we build next?\",\n                \"options\": [\n                    \"Dark Mode\",\n                    \"Custom Dashboards\"\n                ],\n                \"period\": \"1d\",\n                \"correctOptionIndex\": 1,\n                \"explanation\": \"We want to prioritize what our community values the most.\"\n            }\n        },\n        {\n            \"id\": 4354070,\n            \"title\": \"title here\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"POLL\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-17T05:59:44.000000Z\",\n            \"updatedAt\": \"2026-04-17T05:59:44.000000Z\",\n            \"poll\": {\n                \"caption\": \"body here as well\",\n                \"question\": \"what is the new role?\",\n                \"options\": [\n                    \"iron\",\n                    \"dudee\"\n                ],\n                \"period\": \"1d\",\n                \"correctOptionIndex\": 1,\n                \"explanation\": \"iwa ash idir lwaaa7ad\"\n            }\n        },\n        {\n            \"id\": 4348792,\n            \"title\": \"title here\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"POLL\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-15T11:02:09.000000Z\",\n            \"updatedAt\": \"2026-04-15T11:02:09.000000Z\",\n            \"poll\": {\n                \"caption\": \"body here as well\",\n                \"question\": \"what is the new role?\",\n                \"options\": [\n                    \"iron\",\n                    \"dudee\"\n                ],\n                \"period\": \"1d\",\n                \"correctOptionIndex\": 1,\n                \"explanation\": \"iwa ash idir lwaaa7ad\"\n            }\n        },\n        {\n            \"id\": 4345489,\n            \"title\": \"title here\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"POLL\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-14T12:56:09.000000Z\",\n            \"updatedAt\": \"2026-04-14T12:56:09.000000Z\",\n            \"poll\": {\n                \"caption\": \"body here as well\",\n                \"question\": \"what is the new role?\",\n                \"options\": [\n                    \"iron\",\n                    \"dudee\"\n                ],\n                \"period\": \"1d\",\n                \"correctOptionIndex\": 1,\n                \"explanation\": \"iwa ash idir lwaaa7ad\"\n            }\n        },\n        {\n            \"id\": 4345488,\n            \"title\": \"title here\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"POLL\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-14T12:55:38.000000Z\",\n            \"updatedAt\": \"2026-04-14T12:55:38.000000Z\",\n            \"poll\": {\n                \"caption\": null,\n                \"question\": \"what is the new role?\",\n                \"options\": [\n                    \"iron\",\n                    \"dudee\"\n                ],\n                \"period\": \"1d\",\n                \"correctOptionIndex\": 1,\n                \"explanation\": \"iwa ash idir lwaaa7ad\"\n            }\n        },\n        {\n            \"id\": 4345485,\n            \"title\": \"title here\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"POLL\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-14T12:54:59.000000Z\",\n            \"updatedAt\": \"2026-04-14T12:54:59.000000Z\",\n            \"poll\": {\n                \"caption\": \"body here as well\",\n                \"question\": \"what is the new role?\",\n                \"options\": [\n                    \"iron\",\n                    \"dudee\"\n                ],\n                \"period\": \"1d\",\n                \"correctOptionIndex\": 1,\n                \"explanation\": \"iwa ash idir lwaaa7ad\"\n            }\n        },\n        {\n            \"id\": 4345481,\n            \"title\": \"title here\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"POLL\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-14T12:53:07.000000Z\",\n            \"updatedAt\": \"2026-04-14T12:53:07.000000Z\",\n            \"poll\": {\n                \"caption\": \"body here as well\",\n                \"question\": \"what is the new role?\",\n                \"options\": [\n                    \"iron\",\n                    \"dudee\"\n                ],\n                \"period\": \"1d\",\n                \"correctOptionIndex\": 1,\n                \"explanation\": \"iwa ash idir lwaaa7ad\"\n            }\n        },\n        {\n            \"id\": 4345477,\n            \"title\": \"title here\",\n            \"body\": \"body here as well\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"MULTIMEDIA\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-14T12:51:39.000000Z\",\n            \"updatedAt\": \"2026-04-14T12:51:39.000000Z\"\n        },\n        {\n            \"id\": 4341878,\n            \"title\": null,\n            \"body\": \"just an example to create\",\n            \"media\": [],\n            \"postType\": \"TEXT\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-13T14:23:43.000000Z\",\n            \"updatedAt\": \"2026-04-13T14:23:43.000000Z\"\n        },\n        {\n            \"id\": 4332564,\n            \"title\": \"title here\",\n            \"body\": \"body here as well\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"MULTIMEDIA\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-10T13:22:43.000000Z\",\n            \"updatedAt\": \"2026-04-10T13:22:43.000000Z\"\n        },\n        {\n            \"id\": 4332121,\n            \"title\": \"title here\",\n            \"body\": \"body here as well\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"MULTIMEDIA\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-10T09:41:40.000000Z\",\n            \"updatedAt\": \"2026-04-10T09:41:40.000000Z\"\n        },\n        {\n            \"id\": 4332116,\n            \"title\": \"title here\",\n            \"body\": \"body here as well\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"MULTIMEDIA\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-10T09:40:29.000000Z\",\n            \"updatedAt\": \"2026-04-10T09:40:29.000000Z\"\n        },\n        {\n            \"id\": 4332104,\n            \"title\": \"title here\",\n            \"body\": \"body here as well\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"MULTIMEDIA\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-10T09:33:17.000000Z\",\n            \"updatedAt\": \"2026-04-10T09:33:17.000000Z\"\n        },\n        {\n            \"id\": 4332061,\n            \"title\": \"title here\",\n            \"body\": \"body here as well\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"MULTIMEDIA\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-10T09:08:57.000000Z\",\n            \"updatedAt\": \"2026-04-10T09:08:57.000000Z\"\n        },\n        {\n            \"id\": 4332052,\n            \"title\": \"title here\",\n            \"body\": \"body here as well\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"MULTIMEDIA\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-10T09:04:56.000000Z\",\n            \"updatedAt\": \"2026-04-10T09:04:56.000000Z\"\n        },\n        {\n            \"id\": 4332045,\n            \"title\": \"title here\",\n            \"body\": \"body here as well\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"MULTIMEDIA\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-10T08:51:51.000000Z\",\n            \"updatedAt\": \"2026-04-10T08:51:51.000000Z\"\n        },\n        {\n            \"id\": 4329378,\n            \"title\": \"title here\",\n            \"body\": \"body here as well\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"MULTIMEDIA\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-09T15:18:06.000000Z\",\n            \"updatedAt\": \"2026-04-09T15:18:06.000000Z\"\n        },\n        {\n            \"id\": 4326037,\n            \"title\": \"title here\",\n            \"body\": \"body here as well\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"MULTIMEDIA\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-08T15:37:48.000000Z\",\n            \"updatedAt\": \"2026-04-08T15:37:48.000000Z\"\n        },\n        {\n            \"id\": 4325119,\n            \"title\": \"title here\",\n            \"body\": \"body here as well\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"MULTIMEDIA\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-08T09:59:04.000000Z\",\n            \"updatedAt\": \"2026-04-08T09:59:04.000000Z\"\n        },\n        {\n            \"id\": 4325108,\n            \"title\": \"title here\",\n            \"body\": \"body here as well\",\n            \"media\": [\n                {\n                    \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\n                },\n                {\n                    \"id\": \"bWVkaWEvMTM0OTMvaEpIVTJ0NE5EQVpWZXBWd0RBd0lQclRwbjN5eUh0dkJFZFZ0\"\n                }\n            ],\n            \"postType\": \"MULTIMEDIA\",\n            \"postingType\": \"DRAFT\",\n            \"status\": \"DRAFT\",\n            \"postDate\": null,\n            \"createdAt\": \"2026-04-08T09:53:12.000000Z\",\n            \"updatedAt\": \"2026-04-08T09:53:12.000000Z\"\n        }\n    ],\n    \"pagination\": {\n        \"currentPage\": 1,\n        \"perPage\": 25,\n        \"total\": 24,\n        \"lastPage\": 1,\n        \"nextPageUrl\": null,\n        \"prevPageUrl\": null\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "add post",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{api_key}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"title here\",\r\n    \"caption\": \"body here as well\",\r\n    \"poll\": {\r\n        \"question\": \"what is the new role?\",\r\n        \"options\": [\r\n            \"iron\",\r\n            \"dudee\"\r\n        ],\r\n        \"period\": \"3d\",\r\n        \"correctOptionIndex\": 1,\r\n        \"explanation\": \"iwa ash idir lwaaa7ad\"\r\n    },\r\n    \"alt\": \"is this fine\",\r\n    \"link\": \"https://nuelink.com\",\r\n    \"publishMode\": \"DRAFT\",\r\n    \"publishAt\": null,\r\n    \"postAsStory\": true,\r\n    \"comment\": {\r\n        \"comment\": \"this is a comment\",\r\n        \"delay\": 30\r\n    },\r\n    \"media\": [\r\n        {\r\n            \"id\": \"bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0\"\r\n        },\r\n        {\r\n            \"url\": \"https://media.nuelink.com/media/bWVkaWEvanNadVY5Rm8xODdMUWJLZ2wzUmRyd2gzTkNRbHdZVE1TdUpR\"\r\n        }\r\n    ],\r\n    \"platforms\": {\r\n        \"instagram\": {\r\n            \"collab\": \"karim.chamlal\",\r\n            \"location\": {\r\n                \"id\": \"abc123\",\r\n                \"name\": \"bentaib\"\r\n            },\r\n            \"trialReel\": \"MANUAL\",\r\n            \"shareToFeed\": true\r\n        },\r\n        \"facebook\": {\r\n            \"collab\": \"karim.chamlal\",\r\n            \"location\": {\r\n                \"id\": \"abc123\",\r\n                \"name\": \"bentaib\"\r\n            }\r\n        },\r\n        \"tiktok\": {\r\n            \"sendToInbox\": true\r\n        },\r\n        \"youtube\": {\r\n            \"tags\": [\r\n                \"tag1\",\r\n                \"tag2\",\r\n                \"tag3\"\r\n            ],\r\n            \"playlists\": [\r\n                {\r\n                    \"channelId\": \"1\",\r\n                    \"playlistIds\": [\r\n                        \"1\",\r\n                        \"2\"\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://nuelink.com/api/public/v1/brands/:brand_id/collections/:collection_id/posts",
+              "protocol": "https",
+              "host": [
+                "nuelink",
+                "com"
+              ],
+              "path": [
+                "api",
+                "public",
+                "v1",
+                "brands",
+                ":brand_id",
+                "collections",
+                ":collection_id",
+                "posts"
+              ],
+              "variable": [
+                {
+                  "key": "brand_id",
+                  "value": "13493"
+                },
+                {
+                  "key": "collection_id",
+                  "value": "98843"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "api_key",
+      "value": ""
+    }
+  ]
+}

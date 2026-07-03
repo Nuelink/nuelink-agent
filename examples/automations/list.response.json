@@ -1,0 +1,29 @@
+{
+  "status": "success",
+  "data": [
+    {
+      "id": "SAMPLE_AUTOMATION_ID",
+      "title": "Sample Feed Automation",
+      "description": "RSS automation for documentation examples",
+      "collectionId": "SAMPLE_COLLECTION_ID",
+      "status": "ACTIVE",
+      "subType": "RSS",
+      "feedUrl": "SAMPLE_FEED_URL",
+      "runCount": 0,
+      "importAsType": "IMAGE",
+      "lastRun": 0,
+      "dynamicTitle": "{{title}}",
+      "dynamicBody": "New item: {title} {link}",
+      "createdAt": "2024-01-01T00:00:00.000000Z",
+      "updatedAt": "2024-01-01T00:00:00.000000Z"
+    }
+  ],
+  "pagination": {
+    "currentPage": 1,
+    "perPage": 25,
+    "total": 1,
+    "lastPage": 1,
+    "nextPageUrl": null,
+    "prevPageUrl": null
+  }
+}
