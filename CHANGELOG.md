@@ -17,3 +17,6 @@ The format is based on Keep a Changelog, and this project follows Semantic Versi
 - Repository license.
 - This changelog.
 - Postman-derived examples catalog under `examples/` and skill links to expected payloads/responses.
+- Quick start guide (`QUICK_START.md`) for fast onboarding.
+- Repository map (`PROJECT_STRUCTURE.md`) describing folders and responsibilities.
+- API endpoint reference (`API_ENDPOINTS.md`) aligned with current skills.

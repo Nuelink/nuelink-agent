@@ -76,7 +76,9 @@ npm run validate
 |-- examples/
 |-- skills/
 |-- scripts/validate-skills.mjs
-|-- CLI-README.md
+|-- QUICK_START.md
+|-- PROJECT_STRUCTURE.md
+|-- API_ENDPOINTS.md
 |-- CONTRIBUTING.md
 |-- SECURITY.md
 `-- package.json
@@ -84,7 +86,9 @@ npm run validate
 
 ## Related Docs
 
-- CLI reference: [CLI-README.md](CLI-README.md)
+- Quick start: [QUICK_START.md](QUICK_START.md)
+- Project structure: [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md)
+- API endpoints: [API_ENDPOINTS.md](API_ENDPOINTS.md)
 - Skills index: [skills/README.md](skills/README.md)
 - Contributor guide: [CONTRIBUTING.md](CONTRIBUTING.md)
 - Security policy: [SECURITY.md](SECURITY.md)
