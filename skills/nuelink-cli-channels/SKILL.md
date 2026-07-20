@@ -1,11 +1,23 @@
 ---
 name: nuelink-cli-channels
-description: List channels for a specific brand.
+description: Use when a user asks to list channels under a brand or map channel IDs for posting workflows.
+triggers: list channels, find channel id, collection channel mapping, posting destinations
+boundaries: Read-only channel discovery only.
+safety: Confirm one target brand before channel listing if request is ambiguous.
 ---
 
 # Nuelink CLI Channels
 
+Compatibility alias: this flow is now consolidated under `nuelink-cli-manage`.
+
+## Alias Routing
+
+- Primary skill: `nuelink-cli-manage`
+- Reference: `../nuelink-cli-manage/references/manage-workflow.md`
+
 Use this skill to retrieve channels for a brand.
+
+Reference: `./references/channel-discovery.md`
 
 ## Commands
 

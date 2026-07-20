@@ -12,11 +12,19 @@ Overview of what each top-level folder and file is responsible for.
 |-- examples/
 |   |-- README.md
 |   `-- <domain>/*.json
+|-- agents/
+|   `-- openai.yaml
 |-- scripts/
 |   `-- validate-skills.mjs
+|   `-- validate-behavior.mjs
+|-- tests/
+|   `-- behavior/
+|       `-- fixtures.json
 |-- skills/
 |   |-- README.md
-|   `-- <skill-name>/SKILL.md
+|   `-- <skill-name>/
+|       |-- SKILL.md
+|       `-- references/*.md
 |-- CHANGELOG.md
 |-- CONTRIBUTING.md
 |-- LICENSE
@@ -30,7 +38,11 @@ Overview of what each top-level folder and file is responsible for.
 
 ## Notes
 
-- `skills/` is the main product: each skill is one focused workflow.
+- `skills/` contains canonical and legacy alias skills.
+- Canonical skills are `nuelink-cli-setup`, `nuelink-cli-manage`, and `nuelink-cli-publish`.
+- `skills/<skill>/references/` keeps each installed skill self-contained.
 - `examples/` contains sanitized request/response JSON used by skills.
+- `agents/openai.yaml` contains plugin metadata for multi-skill distribution workflows.
 - `scripts/validate-skills.mjs` enforces metadata and structure consistency.
-- CI runs markdown lint and skill validation on pull requests.
+- `scripts/validate-behavior.mjs` enforces safety and routing behavior expectations.
+- CI runs markdown lint, skill validation, and behavior validation on pull requests.

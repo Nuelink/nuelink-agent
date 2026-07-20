@@ -1,11 +1,31 @@
 ---
 name: nuelink-cli-media
-description: List brand media and upload local media files.
+description: Use when a user asks to list media assets or upload local files to a brand media library.
+triggers: list media, upload image, upload video, get media id for post
+boundaries: Media list/upload via nuelink-cli only.
+safety: Verify brand target, check local file path, and require explicit upload confirmation.
 ---
 
 # Nuelink CLI Media
 
+Compatibility alias: this flow is now consolidated under `nuelink-cli-manage`.
+
+## Alias Routing
+
+- Primary skill: `nuelink-cli-manage`
+- Reference: `../nuelink-cli-manage/references/manage-workflow.md`
+
 Use this skill to manage media assets in a brand.
+
+Reference: `./references/media-workflow.md`
+
+## Mutation Safety Workflow
+
+1. Resolve and confirm one `BRAND_ID`.
+2. Validate local file path exists before upload.
+3. Show upload command and target brand for confirmation.
+4. Require explicit intent before running `media:upload`.
+5. Return media ID from the upload response for downstream post creation.
 
 ## List Media
 

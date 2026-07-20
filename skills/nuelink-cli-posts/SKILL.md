@@ -1,11 +1,31 @@
 ---
 name: nuelink-cli-posts
-description: List posts and create posts using JSON payloads or CLI options.
+description: Use when a user asks to list, draft, queue, schedule, or publish Nuelink posts with nuelink-cli.
+triggers: draft post, queue post, schedule post, publish now, list posts, post json payload
+boundaries: Post workflows through nuelink-cli only; do not use for direct REST or MCP calls.
+safety: Resolve brand and collection first, default ambiguous intent to DRAFT, and require explicit confirmation for QUEUE, SCHEDULE, or IMMEDIATE.
 ---
 
 # Nuelink CLI Posts
 
+Compatibility alias: this flow is now consolidated under `nuelink-cli-publish`.
+
+## Alias Routing
+
+- Primary skill: `nuelink-cli-publish`
+- Reference: `../nuelink-cli-publish/references/publish-workflow.md`
+
 Use this skill to list and create posts in a collection.
+
+Reference: `./references/posts-safety.md`
+
+## Mutation Safety Workflow
+
+1. Resolve and confirm one `BRAND_ID` and one `COLLECTION_ID`.
+2. Validate payload fields and publish mode before sending.
+3. If publishing intent is ambiguous, set `publishMode` to `DRAFT`.
+4. For `QUEUE`, `SCHEDULE`, or `IMMEDIATE`, ask for explicit intent confirmation.
+5. Run create command and return created post ID and final publish mode.
 
 ## List Posts
 
@@ -73,3 +93,4 @@ nuelink-cli posts:create \
 - Required for all post commands: `--brand-id`, `--collection-id`.
 - For `posts:add-json`, `--payload` must point to valid JSON.
 - `posts:create` supports many platform-specific flags.
+- Supported publish modes are `DRAFT`, `QUEUE`, `SCHEDULE`, and `IMMEDIATE`.

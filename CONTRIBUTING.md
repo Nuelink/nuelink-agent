@@ -25,8 +25,11 @@ description: Short description of the skill.
 ```
 
 - Ensure exactly one H1 heading exists.
+- Add trigger-focused metadata (for example: `triggers`, `boundaries`, `safety`) when relevant.
 - Prefer executable, copy-ready command examples.
 - Avoid embedding secrets, API keys, or private URLs.
+- Keep runtime references self-contained under `skills/<skill>/references/`.
+- For mutation skills, include a confirmation workflow and safe defaults.
 
 ## Validation
 

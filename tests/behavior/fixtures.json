@@ -1,0 +1,56 @@
+{
+  "checks": [
+    {
+      "id": "publish-default-draft",
+      "description": "Publish workflow defaults ambiguous intent to DRAFT",
+      "file": "skills/nuelink-cli-publish/SKILL.md",
+      "mustContain": [
+        "If intent is ambiguous, use `publishMode=DRAFT`",
+        "require explicit confirmation for `QUEUE`, `SCHEDULE`, or `IMMEDIATE`"
+      ]
+    },
+    {
+      "id": "manage-stop-ambiguity",
+      "description": "Manage workflow stops on ambiguous resource matches",
+      "file": "skills/nuelink-cli-manage/SKILL.md",
+      "mustContain": [
+        "Resolve resource names and confirm one target ID per resource"
+      ]
+    },
+    {
+      "id": "setup-no-key-leak",
+      "description": "Setup workflow includes credential safety guidance",
+      "file": "skills/nuelink-cli-setup/SKILL.md",
+      "mustContain": [
+        "Never print full API keys",
+        "prefer NUELINK_API_KEY"
+      ]
+    },
+    {
+      "id": "manage-json-guidance",
+      "description": "Manage reference includes machine-readable JSON pattern",
+      "file": "skills/nuelink-cli-manage/references/manage-workflow.md",
+      "mustContain": [
+        "nuelink-cli --json brands"
+      ]
+    },
+    {
+      "id": "legacy-alias-posts",
+      "description": "Legacy posts skill points to consolidated publish skill",
+      "file": "skills/nuelink-cli-posts/SKILL.md",
+      "mustContain": [
+        "Compatibility alias",
+        "Primary skill: `nuelink-cli-publish`"
+      ]
+    },
+    {
+      "id": "legacy-alias-automations",
+      "description": "Legacy automations skill points to consolidated manage skill",
+      "file": "skills/nuelink-cli-automations/SKILL.md",
+      "mustContain": [
+        "Compatibility alias",
+        "Primary skill: `nuelink-cli-manage`"
+      ]
+    }
+  ]
+}

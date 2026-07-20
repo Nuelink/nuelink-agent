@@ -1,11 +1,31 @@
 ---
 name: nuelink-cli-automations
-description: List and create automations for a brand and collection.
+description: Use when a user asks to list automations or create feed-based automations in a collection.
+triggers: list automations, create rss automation, import feed posts, automation setup
+boundaries: Automation workflows via nuelink-cli only; do not use for direct API calls.
+safety: Confirm brand and collection targets, validate feed URL, and require explicit create intent.
 ---
 
 # Nuelink CLI Automations
 
+Compatibility alias: this flow is now consolidated under `nuelink-cli-manage`.
+
+## Alias Routing
+
+- Primary skill: `nuelink-cli-manage`
+- Reference: `../nuelink-cli-manage/references/manage-workflow.md`
+
 Use this skill to inspect and create automations.
+
+Reference: `./references/automations-workflow.md`
+
+## Mutation Safety Workflow
+
+1. Resolve and confirm one `BRAND_ID` and one `COLLECTION_ID`.
+2. Validate `--feed-url` and required enum fields before execution.
+3. Present a final action summary with type, source URL, and target collection.
+4. Require explicit user confirmation before `automations:create`.
+5. Run the command and return automation ID plus enabled status.
 
 ## List Automations
 
@@ -43,3 +63,4 @@ nuelink-cli automations:create \
 
 - Required: `--brand-id`, `--collection-id`, `--feed-url`, `--import-as-type`, `--sub-type`, `--title`.
 - Optional fields: `--description`, `--type`, `--dynamic-title`, `--dynamic-body`.
+- Use placeholder IDs in examples; never ship real account IDs.

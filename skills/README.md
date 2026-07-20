@@ -2,17 +2,22 @@
 
 This directory contains reusable skills for common Nuelink CLI workflows.
 
-## Skills Catalog
+## Canonical Skills
 
-- `nuelink-cli-install-auth`: Install CLI and configure authentication.
-- `nuelink-cli-profile`: Validate and inspect the authenticated identity.
-- `nuelink-cli-brands`: List brands with pagination and JSON mode.
-- `nuelink-cli-collections`: List and create collections.
-- `nuelink-cli-automations`: List and create automations.
-- `nuelink-cli-channels`: List channels for a brand.
-- `nuelink-cli-media`: List and upload media files.
-- `nuelink-cli-posts`: List and create posts with JSON payload or flags.
-- `nuelink-cli-ops`: Operational patterns for JSON output, timeouts, and troubleshooting.
+- `nuelink-cli-setup`: install, auth, identity checks, and setup diagnostics.
+- `nuelink-cli-manage`: brands, channels, collections, automations, and media inventory flows.
+- `nuelink-cli-publish`: upload media, draft/queue/schedule/publish posts, and post listing.
+
+## Compatibility Aliases
+
+The original 9 skill folders are retained for backward compatibility and route users to the canonical skills above.
+
+Each skill contains:
+
+- Trigger-oriented frontmatter for better skill routing.
+- Scope boundaries clarifying what the skill should not do.
+- Safety guidance for credentials, IDs, and mutations.
+- Self-contained references in `references/*.md`.
 
 ## Standard Conventions
 
@@ -20,6 +25,9 @@ This directory contains reusable skills for common Nuelink CLI workflows.
 - Use `--json` for machine-readable automation and CI pipelines.
 - Keep secrets in environment variables, not in command history or files.
 - Use explicit pagination (`--per-page`, `--page`) in scripts for deterministic behavior.
+- Resolve target IDs before mutation commands.
+- Use `DRAFT` as the default when publish intent is ambiguous.
+- Require explicit confirmation for non-draft publishing and other create operations.
 
 ## Authoring Rules
 
@@ -27,6 +35,7 @@ This directory contains reusable skills for common Nuelink CLI workflows.
 - Every skill starts with YAML frontmatter including `name` and `description`.
 - Frontmatter `name` must match folder name.
 - Include one clear H1 heading and practical command examples.
+- Keep references local to the skill folder under `references/`.
 
 ## Validation
 
@@ -34,9 +43,10 @@ Run from repository root:
 
 ```bash
 npm run validate
+npm run validate:behavior
 ```
 
-## Examples Directory
+## Shared Examples Directory
 
-- Shared API request/response examples are in `examples/`.
-- Skill files reference the relevant JSON under `examples/<domain>/`.
+- Repository-level request/response examples remain in `examples/`.
+- Skill runtime references should remain local in each skill `references/` directory.

@@ -1,0 +1,41 @@
+version: 1
+name: nuelink-agent-skills
+display_name: Nuelink CLI Skills
+summary: Skill bundle for Nuelink CLI setup, discovery, and safe publish workflows.
+skills:
+  - id: nuelink-cli-setup
+    path: skills/nuelink-cli-setup
+    description: Canonical setup, auth, identity, and ops-readiness skill.
+  - id: nuelink-cli-manage
+    path: skills/nuelink-cli-manage
+    description: Canonical management skill for brands, channels, collections, automations, and media.
+  - id: nuelink-cli-publish
+    path: skills/nuelink-cli-publish
+    description: Canonical publishing skill for media upload and post workflows.
+  - id: nuelink-cli-install-auth
+    path: skills/nuelink-cli-install-auth
+    description: Legacy alias to nuelink-cli-setup.
+  - id: nuelink-cli-profile
+    path: skills/nuelink-cli-profile
+    description: Legacy alias to nuelink-cli-setup.
+  - id: nuelink-cli-brands
+    path: skills/nuelink-cli-brands
+    description: Legacy alias to nuelink-cli-manage.
+  - id: nuelink-cli-collections
+    path: skills/nuelink-cli-collections
+    description: Legacy alias to nuelink-cli-manage.
+  - id: nuelink-cli-automations
+    path: skills/nuelink-cli-automations
+    description: Legacy alias to nuelink-cli-manage.
+  - id: nuelink-cli-channels
+    path: skills/nuelink-cli-channels
+    description: Legacy alias to nuelink-cli-manage.
+  - id: nuelink-cli-media
+    path: skills/nuelink-cli-media
+    description: Legacy alias to nuelink-cli-manage.
+  - id: nuelink-cli-posts
+    path: skills/nuelink-cli-posts
+    description: Legacy alias to nuelink-cli-publish.
+  - id: nuelink-cli-ops
+    path: skills/nuelink-cli-ops
+    description: Legacy alias to nuelink-cli-setup.

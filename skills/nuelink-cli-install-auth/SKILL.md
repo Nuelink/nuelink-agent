@@ -1,9 +1,23 @@
 ---
 name: nuelink-cli-install-auth
-description: Install the Nuelink CLI and configure authentication using --auth, NUELINK_API_KEY, or saved config.
+description: Use when a user asks to install, authenticate, verify, or reset Nuelink CLI credentials.
+triggers: install nuelink cli, set api key, auth status, clear auth, nuelink login
+boundaries: CLI setup and authentication only; do not use for direct REST or MCP calls.
+safety: Never print full API keys, prefer NUELINK_API_KEY in CI, and avoid sharing credentials in command history.
 ---
 
 # Nuelink CLI Install And Auth
+
+Compatibility alias: this flow is now consolidated under `nuelink-cli-setup`.
+
+Use `nuelink-cli-setup` for full setup and auth workflows.
+
+## Alias Routing
+
+- Primary skill: `nuelink-cli-setup`
+- Reference: `../nuelink-cli-setup/references/setup-workflow.md`
+
+## Legacy Scope (Still Supported)
 
 Use this skill when someone needs to:
 
@@ -11,6 +25,8 @@ Use this skill when someone needs to:
 - Authenticate the CLI with an API key
 - Verify where auth is loaded from
 - Clear saved credentials
+
+Reference: `./references/auth-flow.md`
 
 ## Requirements
 
@@ -39,6 +55,12 @@ nuelink-cli --auth YOUR_API_KEY
 ```
 
 The `--auth` value is persisted to local user config.
+
+For shared or automated environments, prefer environment variables instead of persisted local config:
+
+```bash
+NUELINK_API_KEY=YOUR_API_KEY nuelink-cli auth:status
+```
 
 ### Check auth status
 
@@ -80,3 +102,9 @@ nuelink-cli --auth YOUR_API_KEY
 nuelink-cli auth:status
 nuelink-cli me
 ```
+
+## Safety Notes
+
+- Do not echo raw API keys in logs, screenshots, or chat transcripts.
+- Prefer temporary shell environment variables in CI.
+- If a key may have leaked, rotate it before continuing.

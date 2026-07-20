@@ -20,3 +20,17 @@ The format is based on Keep a Changelog, and this project follows Semantic Versi
 - Quick start guide (`QUICK_START.md`) for fast onboarding.
 - Repository map (`PROJECT_STRUCTURE.md`) describing folders and responsibilities.
 - API endpoint reference (`API_ENDPOINTS.md`) aligned with current skills.
+- Skill-local reference guides under `skills/<skill>/references/` for portable installation.
+- Safety-first mutation workflow guidance across create/upload/publish skills.
+- Trigger and boundary metadata in skill frontmatter for better routing.
+- Plugin metadata scaffold at `agents/openai.yaml`.
+- Canonical 3-skill architecture: `nuelink-cli-setup`, `nuelink-cli-manage`, `nuelink-cli-publish`.
+- Behavior fixture test harness at `tests/behavior/fixtures.json`.
+- Behavior validation script at `scripts/validate-behavior.mjs`.
+
+### Changed
+
+- Updated repository and skills documentation with native skill discovery locations and trust guidance.
+- Updated quick-start guidance to prefer environment-variable auth in CI contexts.
+- Converted legacy 9-skill modules into compatibility aliases to preserve existing integrations.
+- Updated CI to run behavior validation in addition to structure and markdown checks.
