@@ -9,7 +9,7 @@ This repo packages practical, copy-paste workflows for auth, brands, collections
 Ecosystem installer:
 
 ```bash
-npx skills add kreatinc/nuelink-agent
+npx skills add Nuelink/nuelink-agent
 ```
 
 Native local locations (Codex/OpenAI agent runtime):
