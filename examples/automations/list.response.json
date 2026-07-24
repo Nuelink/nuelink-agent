@@ -2,13 +2,13 @@
   "status": "success",
   "data": [
     {
-      "id": "SAMPLE_AUTOMATION_ID",
+      "id": 4001,
       "title": "Sample Feed Automation",
       "description": "RSS automation for documentation examples",
-      "collectionId": "SAMPLE_COLLECTION_ID",
+      "collectionId": 2001,
       "status": "ACTIVE",
       "subType": "RSS",
-      "feedUrl": "SAMPLE_FEED_URL",
+      "feedUrl": "https://example.com/feed.xml",
       "runCount": 0,
       "importAsType": "IMAGE",
       "lastRun": 0,

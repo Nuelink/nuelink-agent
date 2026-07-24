@@ -2,7 +2,7 @@
   "status": "success",
   "data": [
     {
-      "id": "SAMPLE_MEDIA_ID",
+      "id": 5001,
       "name": "sample-image.png",
       "type": "image/png",
       "size": 2048,

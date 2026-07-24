@@ -1,6 +1,7 @@
 {
     "status": "success",
     "data": {
+        "id": "sample_user_external_id",
         "name": "SAMPLE_USER_NAME",
         "joinedAt": "2024-01-01T00:00:00.000000Z",
         "timezone": "UTC"

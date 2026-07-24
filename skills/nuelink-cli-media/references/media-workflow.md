@@ -3,7 +3,7 @@
 ## Commands
 
 ```bash
-nuelink-cli media --brand-id BRAND_ID
+nuelink-cli media --brand-id BRAND_ID --type IMAGE
 nuelink-cli media:upload --brand-id BRAND_ID --file ./assets/image.jpg
 ```
 

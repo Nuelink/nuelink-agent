@@ -94,3 +94,5 @@ nuelink-cli posts:create \
 - For `posts:add-json`, `--payload` must point to valid JSON.
 - `posts:create` supports many platform-specific flags.
 - Supported publish modes are `DRAFT`, `QUEUE`, `SCHEDULE`, and `IMMEDIATE`.
+- Scheduled values use `YYYY-MM-DD HH:mm:ss`; poll option indexes are
+  zero-based.

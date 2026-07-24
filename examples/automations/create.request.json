@@ -1,6 +1,6 @@
 {
-  "collectionId": "SAMPLE_COLLECTION_ID",
-  "feedUrl": "SAMPLE_FEED_URL",
+  "collectionId": 2001,
+  "feedUrl": "https://example.com/feed.xml",
   "importAsType": "IMAGE",
   "subType": "RSS",
   "title": "Sample Feed Automation",

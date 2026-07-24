@@ -2,7 +2,7 @@
     "status": "success",
     "data": [
         {
-            "id": "SAMPLE_CHANNEL_ID",
+            "id": 3001,
             "name": "sample-channel",
             "status": "ACTIVE",
             "type": "TikTok",

@@ -62,5 +62,10 @@ nuelink-cli automations:create \
 ## Notes
 
 - Required: `--brand-id`, `--collection-id`, `--feed-url`, `--import-as-type`, `--sub-type`, `--title`.
-- Optional fields: `--description`, `--type`, `--dynamic-title`, `--dynamic-body`.
+- Optional fields: `--description`, `--type`, `--dynamic-title`,
+  `--dynamic-body`, `--load-old-posts`, `--add-posts-as-draft`, and
+  `--refresh-rate` (`24`, `12`, `6`, or `1`).
+- `--import-as-type` accepts `LINK`, `IMAGE`, `VIDEO`, or `CAROUSEL`.
+- `--sub-type` accepts the feed subtypes defined by the OpenAPI contract; run
+  `nuelink-cli help automations:create` for the command reference.
 - Use placeholder IDs in examples; never ship real account IDs.

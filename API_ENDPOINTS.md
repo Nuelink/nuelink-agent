@@ -2,6 +2,10 @@
 
 These are the public API endpoint patterns used by the current skill set.
 
+Base URL: `https://nuelink.com/api/public/v1`. Every request uses
+`Authorization: Bearer <token>`. List endpoints accept `page` (minimum `1`)
+and `per_page` (`1` through `100`, default `25`).
+
 ## Profile
 
 | Endpoint | Method | Purpose |
@@ -50,5 +54,7 @@ These are the public API endpoint patterns used by the current skill set.
 
 ## Notes
 
-- Path and query arguments vary by command flags.
+- Media listing additionally accepts `type`: `IMAGE`, `VIDEO`, `GIF`,
+  `APPLICATION`, `DOCUMENT`, or `CSV`.
+- Scheduled posts use `scheduledAt` in `YYYY-MM-DD HH:mm:ss` format.
 - Example payloads and responses are in [examples/](examples).

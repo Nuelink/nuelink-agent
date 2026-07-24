@@ -32,7 +32,7 @@ nuelink-cli posts:add-json \
   "title": "Post title",
   "caption": "Post body",
   "publishMode": "SCHEDULE",
-  "scheduledAt": "2026-08-01T16:00:00Z"
+  "scheduledAt": "2026-08-01 16:00:00"
 }
 ```
 

@@ -6,14 +6,11 @@ The JSON files in this folder use placeholder tokens instead of real user data.
 
 - `SAMPLE_API_KEY`: API key value
 - `SAMPLE_USER_NAME`: Profile display name
-- `SAMPLE_BRAND_ID`: Brand identifier
-- `SAMPLE_COLLECTION_ID`: Collection identifier
-- `SAMPLE_AUTOMATION_ID`: Automation identifier
-- `SAMPLE_CHANNEL_ID`: Channel identifier
 - `SAMPLE_MEDIA_ID`: Media identifier
-- `SAMPLE_POST_ID`: Post identifier
-- `SAMPLE_MEDIA_URL`: Public media URL
-- `SAMPLE_FEED_URL`: Feed URL for automations
+
+Numeric API identifiers use non-production example integers so their JSON types
+match the OpenAPI contract. The uploaded-media identifier remains a string
+because that is the value accepted by post creation.
 
 ## Usage
 

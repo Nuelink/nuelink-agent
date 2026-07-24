@@ -2,7 +2,8 @@
   "status": "success",
   "data": [
     {
-      "id": "SAMPLE_POST_ID",
+      "id": 6001,
+      "collectionId": 2001,
       "title": null,
       "body": "Sample published post body for documentation examples.",
       "media": [
@@ -13,7 +14,7 @@
       "postType": "IMAGE",
       "postingType": "SCHEDULE",
       "status": "PUBLISHED",
-      "postDate": "2024-01-01 14:00:00",
+      "postDate": "2024-01-01T14:00:00.000000Z",
       "createdAt": "2024-01-01T10:00:00.000000Z",
       "updatedAt": "2024-01-01T14:00:00.000000Z"
     }

@@ -30,7 +30,7 @@ Reference: `./references/media-workflow.md`
 ## List Media
 
 ```bash
-nuelink-cli media --brand-id 13493
+nuelink-cli media --brand-id 13493 --type IMAGE
 ```
 
 ## Upload Media
@@ -53,5 +53,6 @@ nuelink-cli media:upload --brand-id 13493 --file ./assets/image.jpg
 ## Notes
 
 - `--brand-id` is required for both commands.
+- Listing optionally accepts `--type IMAGE|VIDEO|GIF|APPLICATION|DOCUMENT|CSV`.
 - `media:upload` requires a valid local file path.
 - Increase timeout for large files with `NUELINK_TIMEOUT_MS`.

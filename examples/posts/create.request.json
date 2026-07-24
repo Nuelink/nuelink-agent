@@ -2,13 +2,13 @@
   "title": "Sample Post Title",
   "caption": "Sample post body used for documentation examples.",
   "publishMode": "DRAFT",
-  "scheduleAt": null,
+  "scheduledAt": null,
   "media": [
     {
       "id": "SAMPLE_MEDIA_ID"
     },
     {
-      "url": "SAMPLE_MEDIA_URL"
+      "url": "https://media.nuelink.com/media/sample-public-id"
     }
   ],
   "platforms": {

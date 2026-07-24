@@ -2,7 +2,7 @@
   "status": "success",
   "data": [
     {
-      "id": "SAMPLE_BRAND_ID",
+      "id": 1001,
       "title": "Sample Brand",
       "description": "Sample brand description",
       "timezone": "UTC",
