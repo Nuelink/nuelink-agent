@@ -17,7 +17,7 @@ npm install -g @nuelink/nuelink-cli
 ## 3. Authenticate
 
 ```bash
-nuelink-cli --auth YOUR_API_KEY
+printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
 nuelink-cli auth:status
 ```
 

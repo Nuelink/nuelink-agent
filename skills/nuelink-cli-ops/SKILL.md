@@ -38,7 +38,7 @@ NUELINK_TIMEOUT_MS=120000 nuelink-cli media --brand-id 13493
 ```bash
 nuelink-cli auth:status
 nuelink-cli auth:clear
-nuelink-cli --auth YOUR_API_KEY
+printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
 ```
 
 ## CI Pattern

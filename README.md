@@ -34,7 +34,7 @@ Only install skills from repositories you trust. Skills are executable instructi
 
 ```bash
 npm install -g @nuelink/nuelink-cli
-nuelink-cli --auth YOUR_API_KEY
+printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
 nuelink-cli auth:status
 ```
 

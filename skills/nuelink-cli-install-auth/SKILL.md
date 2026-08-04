@@ -51,7 +51,7 @@ npx @nuelink/nuelink-cli --help
 ### Save API key for future commands
 
 ```bash
-nuelink-cli --auth YOUR_API_KEY
+printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
 ```
 
 The `--auth` value is persisted to local user config.
@@ -98,7 +98,7 @@ Example file:
 ## Quick Verification Flow
 
 ```bash
-nuelink-cli --auth YOUR_API_KEY
+printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
 nuelink-cli auth:status
 nuelink-cli me
 ```

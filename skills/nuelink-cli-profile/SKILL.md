@@ -40,6 +40,6 @@ nuelink-cli me
 
 ## Troubleshooting
 
-- If auth is missing, save a key with `nuelink-cli --auth YOUR_API_KEY`.
+- If auth is missing, save a key with `printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin`.
 - If the wrong token is active, run `nuelink-cli auth:clear` and set a new one.
 - If multiple environments exist, show `nuelink-cli auth:status` before running any create command.
