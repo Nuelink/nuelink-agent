@@ -5,7 +5,7 @@ This guide gets you from zero to first successful Nuelink CLI calls with the ski
 ## 1. Install The Skill Pack
 
 ```bash
-npx skills add kreatinc/nuelink-agent
+npx skills add Nuelink/nuelink-agent
 ```
 
 ## 2. Install The Nuelink CLI
