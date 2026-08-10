@@ -1,14 +1,20 @@
 ---
 name: nuelink-cli-brands
-description: Use when a user asks to list brands, paginate brand results, or retrieve brand IDs.
-triggers: list brands, find brand id, paginate brands, show brands as json
-boundaries: Read-only brand listing; do not create or modify resources.
-safety: If multiple brand matches are possible, require explicit user confirmation of target brand before mutation workflows.
+description: List and paginate brands or retrieve brand IDs with nuelink-cli. Use for read-only brand discovery; if several brands match, require explicit target confirmation before a later mutation.
 ---
 
 # Nuelink CLI Brands
 
 Compatibility alias: this flow is now consolidated under `nuelink-cli-manage`.
+
+## How To Use
+
+Use this alias when you need brand IDs or a paged list before a later change.
+
+```bash
+nuelink-cli brands --per-page 25 --page 1
+nuelink-cli --json brands --per-page 25 --page 1
+```
 
 ## Alias Routing
 

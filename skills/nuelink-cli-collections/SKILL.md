@@ -1,14 +1,20 @@
 ---
 name: nuelink-cli-collections
-description: Use when a user asks to list collections or create a collection for a specific brand.
-triggers: list collections, create collection, add queue slots, assign channels to collection
-boundaries: Collection commands through nuelink-cli only; do not call raw REST or MCP directly.
-safety: Resolve the brand first, preview validated payload, and require explicit intent before create.
+description: List or safely create collections for a brand with nuelink-cli, including queue slots and channel assignment. Resolve the brand, preview mutations, and require explicit create intent; do not call REST or MCP directly.
 ---
 
 # Nuelink CLI Collections
 
 Compatibility alias: this flow is now consolidated under `nuelink-cli-manage`.
+
+## How To Use
+
+Use this alias when you need to list or create collections for one brand.
+
+```bash
+nuelink-cli collections --brand-id BRAND_ID --per-page 25 --page 1
+nuelink-cli collections:create --brand-id BRAND_ID --title "Collection Title" --dry-run
+```
 
 ## Alias Routing
 
@@ -23,9 +29,9 @@ Reference: `./references/collections-workflow.md`
 
 1. Resolve the target brand with `nuelink-cli brands` and confirm one `BRAND_ID`.
 2. Validate title, channels, and queues before execution.
-3. Show the exact `collections:create` command for review.
+3. Run the exact `collections:create` command with `--dry-run` and show its validated payload for review.
 4. Ask for explicit confirmation before running create.
-5. Run the command and return the created collection ID from response data.
+5. Run the same command without `--dry-run` and return the created collection ID from response data.
 
 ## List Collections
 

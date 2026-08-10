@@ -14,4 +14,5 @@ nuelink-cli media:upload --brand-id BRAND_ID --file ./assets/image.jpg
 
 ## Guardrail
 
-- Confirm target brand and local file path before upload.
+- Run `media:upload` with `--dry-run` to validate the target and file metadata.
+- Confirm the target brand and local file path, then re-run without `--dry-run`.

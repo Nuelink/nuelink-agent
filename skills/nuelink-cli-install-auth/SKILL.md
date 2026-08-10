@@ -1,9 +1,6 @@
 ---
 name: nuelink-cli-install-auth
-description: Use when a user asks to install, authenticate, verify, or reset Nuelink CLI credentials.
-triggers: install nuelink cli, set api key, auth status, clear auth, nuelink login
-boundaries: CLI setup and authentication only; do not use for direct REST or MCP calls.
-safety: Never print full API keys, prefer NUELINK_API_KEY in CI, and avoid sharing credentials in command history.
+description: Install, authenticate, verify, or reset Nuelink CLI credentials. Use for CLI setup and auth only; never print full API keys, prefer NUELINK_API_KEY in CI, and avoid direct REST or MCP calls.
 ---
 
 # Nuelink CLI Install And Auth
@@ -11,6 +8,16 @@ safety: Never print full API keys, prefer NUELINK_API_KEY in CI, and avoid shari
 Compatibility alias: this flow is now consolidated under `nuelink-cli-setup`.
 
 Use `nuelink-cli-setup` for full setup and auth workflows.
+
+## How To Use
+
+Use this alias when the request is only about install, login, logout, or checking the active account.
+
+```bash
+npm install -g @nuelink/nuelink-cli
+printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
+nuelink-cli auth:status
+```
 
 ## Alias Routing
 
@@ -54,7 +61,7 @@ npx @nuelink/nuelink-cli --help
 printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
 ```
 
-The `--auth` value is persisted to local user config.
+The `--api-key` global flag is runtime-only. To persist a key, use `auth:login --stdin` as shown above.
 
 For shared or automated environments, prefer environment variables instead of persisted local config:
 
@@ -78,7 +85,7 @@ nuelink-cli auth:clear
 
 The CLI resolves credentials in this order:
 
-1. `--auth <api_key>` CLI flag
+1. `--api-key <api_key>` CLI flag
 2. `NUELINK_API_KEY` environment variable
 3. Saved config file
 

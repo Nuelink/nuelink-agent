@@ -1,14 +1,20 @@
 ---
 name: nuelink-cli-ops
-description: Use when a user asks for CI-safe JSON usage, timeout tuning, retries, or operational troubleshooting with nuelink-cli.
-triggers: json mode, ci parsing, timeout tuning, rate limit handling, cli troubleshooting
-boundaries: Operational command patterns only; does not replace resource-specific skills.
-safety: Prefer machine-safe JSON output, avoid leaking secrets, and fail fast on auth/config issues.
+description: Provide CI-safe JSON usage, timeout tuning, retries, and operational troubleshooting for nuelink-cli. Use for operational patterns, prefer machine-safe output, avoid secrets, and defer resource work to its specific skill.
 ---
 
 # Nuelink CLI Ops
 
 Compatibility alias: this flow is now consolidated under `nuelink-cli-setup`.
+
+## How To Use
+
+Use this alias when the request is about JSON output, CI behavior, or timeout handling.
+
+```bash
+nuelink-cli --json brands --per-page 25 --page 1
+nuelink-cli auth:status
+```
 
 ## Alias Routing
 

@@ -1,9 +1,6 @@
 ---
 name: nuelink-cli-setup
-description: Use when a user asks to install nuelink-cli, authenticate, verify active identity, or troubleshoot auth/config.
-triggers: install nuelink cli, login, set api key, auth status, me, clear auth, ci auth setup
-boundaries: Setup and diagnostics only; do not create collections, automations, uploads, or posts.
-safety: Never print full API keys and prefer NUELINK_API_KEY for automation.
+description: Install nuelink-cli, authenticate, verify identity, or troubleshoot auth/config. Use for setup and diagnostics only; never print full API keys, prefer NUELINK_API_KEY in automation, and do not mutate Nuelink resources.
 ---
 
 # Nuelink CLI Setup
@@ -11,6 +8,17 @@ safety: Never print full API keys and prefer NUELINK_API_KEY for automation.
 Use this skill for installation, authentication, identity verification, and operational readiness checks.
 
 Reference: `./references/setup-workflow.md`
+
+## How To Use
+
+Use this skill first when you need to install the CLI or confirm which account is active.
+
+```bash
+npm install -g @nuelink/nuelink-cli
+printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
+nuelink-cli auth:status
+nuelink-cli me
+```
 
 ## Core Workflow
 
@@ -28,6 +36,12 @@ export NUELINK_API_KEY="YOUR_API_KEY"
 nuelink-cli auth:status
 nuelink-cli --json brands --per-page 5 --page 1
 ```
+
+## When To Stop
+
+- Stop if `nuelink-cli me` shows the wrong account.
+- Stop if `auth:status` fails and credentials need to be reset.
+- Hand off to `nuelink-cli-manage` or `nuelink-cli-publish` after setup is confirmed.
 
 ## Guardrails
 

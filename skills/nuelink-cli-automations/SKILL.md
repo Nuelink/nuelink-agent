@@ -1,14 +1,20 @@
 ---
 name: nuelink-cli-automations
-description: Use when a user asks to list automations or create feed-based automations in a collection.
-triggers: list automations, create rss automation, import feed posts, automation setup
-boundaries: Automation workflows via nuelink-cli only; do not use for direct API calls.
-safety: Confirm brand and collection targets, validate feed URL, and require explicit create intent.
+description: List automations or safely create feed-based automations with nuelink-cli. Use for RSS/feed imports and automation setup; confirm targets and explicit create intent, and do not use for direct API calls.
 ---
 
 # Nuelink CLI Automations
 
 Compatibility alias: this flow is now consolidated under `nuelink-cli-manage`.
+
+## How To Use
+
+Use this alias when you need to inspect or create feed-based automations.
+
+```bash
+nuelink-cli automations --brand-id BRAND_ID
+nuelink-cli automations:create --brand-id BRAND_ID --collection-id COLLECTION_ID --feed-url "https://example.com/feed.xml" --dry-run
+```
 
 ## Alias Routing
 
@@ -23,9 +29,9 @@ Reference: `./references/automations-workflow.md`
 
 1. Resolve and confirm one `BRAND_ID` and one `COLLECTION_ID`.
 2. Validate `--feed-url` and required enum fields before execution.
-3. Present a final action summary with type, source URL, and target collection.
+3. Run the complete command with `--dry-run` and present the resolved type, source URL, and target collection.
 4. Require explicit user confirmation before `automations:create`.
-5. Run the command and return automation ID plus enabled status.
+5. Run the same command without `--dry-run`, then return the automation ID plus enabled status.
 
 ## List Automations
 

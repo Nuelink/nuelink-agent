@@ -4,6 +4,28 @@ Agent skills and examples for working with the Nuelink CLI.
 
 This repo packages practical, copy-paste workflows for auth, brands, collections, automations, channels, media, and posts.
 
+## How To Use
+
+1. Install the skills pack.
+
+```bash
+npx skills add Nuelink/nuelink-agent
+```
+
+2. Install and authenticate the CLI.
+
+```bash
+npm install -g @nuelink/nuelink-cli
+printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
+nuelink-cli auth:status
+```
+
+3. Pick the smallest skill that matches the task.
+
+- Setup and auth: [skills/nuelink-cli-setup/SKILL.md](skills/nuelink-cli-setup/SKILL.md)
+- Resource discovery and safe create flows: [skills/nuelink-cli-manage/SKILL.md](skills/nuelink-cli-manage/SKILL.md)
+- Media upload and post publishing: [skills/nuelink-cli-publish/SKILL.md](skills/nuelink-cli-publish/SKILL.md)
+
 ## Install As Skills
 
 Ecosystem installer:
@@ -52,6 +74,8 @@ nuelink-cli me
 nuelink-cli brands --per-page 5 --page 1
 nuelink-cli --json brands --per-page 5 --page 1
 ```
+
+If you only need one simple workflow, start with the matching skill and keep the command sequence short: discover first, then create.
 
 ## Skill Coverage
 

@@ -19,4 +19,4 @@ nuelink-cli collections:create \
 
 ## Guardrail
 
-- Confirm brand target and preview payload before create.
+- Run the complete create command with `--dry-run`, then confirm the brand target and previewed payload before re-running without `--dry-run`.

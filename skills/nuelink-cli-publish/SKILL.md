@@ -1,9 +1,6 @@
 ---
 name: nuelink-cli-publish
-description: Use when a user asks to upload media, draft, queue, schedule, publish, or list posts via nuelink-cli.
-triggers: draft post, publish now, queue post, schedule post, upload media, list posts, create post from json
-boundaries: Publish workflows through nuelink-cli only; do not use for direct REST or MCP calls.
-safety: Resolve IDs first, default ambiguous intent to DRAFT, and require explicit confirmation for QUEUE, SCHEDULE, or IMMEDIATE.
+description: Upload media and list, draft, queue, schedule, or publish posts with nuelink-cli. Resolve targets, default ambiguity to DRAFT, preview every mutation, and explicitly confirm uploads and non-draft posts; do not call REST or MCP directly.
 ---
 
 # Nuelink CLI Publish
@@ -12,14 +9,23 @@ Use this skill to run safe end-to-end publishing workflows.
 
 Reference: `./references/publish-workflow.md`
 
+## How To Use
+
+Use this skill when the task ends with media upload or post creation.
+
+```bash
+nuelink-cli media:upload --brand-id BRAND_ID --file ./assets/image.jpg
+nuelink-cli posts --brand-id BRAND_ID --collection-id COLLECTION_ID
+```
+
 ## Safe Mutation Workflow
 
 1. Resolve and confirm exactly one `BRAND_ID` and one `COLLECTION_ID`.
-2. Optionally resolve channels and upload media IDs.
-3. Validate payload fields and publish mode.
+2. Optionally resolve channels; preview media uploads with `--dry-run`, confirm, then upload.
+3. Validate payload fields and publish mode by running the complete post command with `--dry-run`.
 4. If intent is ambiguous, use `publishMode=DRAFT`.
 5. Require explicit confirmation for `QUEUE`, `SCHEDULE`, or `IMMEDIATE`.
-6. Run the command and return created resource IDs.
+6. Run the same command without `--dry-run` and return created resource IDs.
 
 ## Commands
 
@@ -54,3 +60,9 @@ nuelink-cli posts:add-json \
   --collection-id COLLECTION_ID \
   --payload ./post.json
 ```
+
+## Simple Rule
+
+- If the post content is unclear, use `DRAFT`.
+- If the post is not a draft, ask for explicit confirmation.
+- Use the smallest command that gets the job done.

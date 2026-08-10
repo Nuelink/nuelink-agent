@@ -20,4 +20,5 @@ nuelink-cli automations:create \
 
 ## Guardrail
 
-- Do not create automation until brand, collection, and feed URL are confirmed.
+- Run the complete create command with `--dry-run` before asking for confirmation.
+- Do not create the automation until brand, collection, and feed URL are confirmed; then re-run without `--dry-run`.

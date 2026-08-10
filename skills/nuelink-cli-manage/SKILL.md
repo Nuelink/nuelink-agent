@@ -1,9 +1,6 @@
 ---
 name: nuelink-cli-manage
-description: Use when a user asks to list or create brands-related resources such as collections, channels, automations, and media inventory.
-triggers: list brands, list channels, list collections, create collection, list automations, create automation, list media
-boundaries: Resource management via nuelink-cli only; excludes post publishing flows.
-safety: Resolve names to IDs first, stop on ambiguous matches, preview create actions, and require explicit confirmation before mutations.
+description: List or safely create brand resources with nuelink-cli, including collections, channels, automations, and media inventory. Resolve IDs, stop on ambiguity, preview and confirm mutations; exclude post publishing and direct API calls.
 ---
 
 # Nuelink CLI Manage
@@ -11,6 +8,16 @@ safety: Resolve names to IDs first, stop on ambiguous matches, preview create ac
 Use this skill to discover resources and perform safe non-post mutations.
 
 Reference: `./references/manage-workflow.md`
+
+## How To Use
+
+Use this skill when you need to list a brand resource first, then create or update something tied to that brand.
+
+```bash
+nuelink-cli brands --per-page 25 --page 1
+nuelink-cli collections --brand-id BRAND_ID --per-page 25 --page 1
+nuelink-cli media --brand-id BRAND_ID
+```
 
 ## Discovery Commands
 
@@ -26,9 +33,9 @@ nuelink-cli media --brand-id BRAND_ID
 
 1. Resolve resource names and confirm one target ID per resource.
 2. Validate payload fields and required enums.
-3. Show exact create command before execution.
+3. Run the exact create command with `--dry-run` and show the validated payload.
 4. Obtain explicit user confirmation before create.
-5. Return created ID and key status fields.
+5. Run the same command without `--dry-run`, then return the created ID and key status fields.
 
 ## Mutation Commands
 
@@ -56,3 +63,9 @@ nuelink-cli automations:create \
   --title "Automation Title" \
   --type FEED
 ```
+
+## Keep It Simple
+
+- Discover the target ID before creating anything.
+- Use `--dry-run` before the real command.
+- Prefer one resource change at a time.

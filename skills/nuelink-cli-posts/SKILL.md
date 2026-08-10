@@ -1,14 +1,20 @@
 ---
 name: nuelink-cli-posts
-description: Use when a user asks to list, draft, queue, schedule, or publish Nuelink posts with nuelink-cli.
-triggers: draft post, queue post, schedule post, publish now, list posts, post json payload
-boundaries: Post workflows through nuelink-cli only; do not use for direct REST or MCP calls.
-safety: Resolve brand and collection first, default ambiguous intent to DRAFT, and require explicit confirmation for QUEUE, SCHEDULE, or IMMEDIATE.
+description: List, draft, queue, schedule, or publish Nuelink posts with nuelink-cli. Resolve targets, default ambiguous intent to DRAFT, preview mutations, and explicitly confirm QUEUE, SCHEDULE, or IMMEDIATE; do not call REST or MCP directly.
 ---
 
 # Nuelink CLI Posts
 
 Compatibility alias: this flow is now consolidated under `nuelink-cli-publish`.
+
+## How To Use
+
+Use this alias when the request is about listing posts or creating one post.
+
+```bash
+nuelink-cli posts --brand-id BRAND_ID --collection-id COLLECTION_ID
+nuelink-cli posts:create --brand-id BRAND_ID --collection-id COLLECTION_ID --title "Post title" --publish-mode DRAFT
+```
 
 ## Alias Routing
 
@@ -22,10 +28,10 @@ Reference: `./references/posts-safety.md`
 ## Mutation Safety Workflow
 
 1. Resolve and confirm one `BRAND_ID` and one `COLLECTION_ID`.
-2. Validate payload fields and publish mode before sending.
+2. Validate payload fields and publish mode by running the complete create command with `--dry-run`.
 3. If publishing intent is ambiguous, set `publishMode` to `DRAFT`.
 4. For `QUEUE`, `SCHEDULE`, or `IMMEDIATE`, ask for explicit intent confirmation.
-5. Run create command and return created post ID and final publish mode.
+5. Run the same command without `--dry-run` and return the post ID and final publish mode.
 
 ## List Posts
 

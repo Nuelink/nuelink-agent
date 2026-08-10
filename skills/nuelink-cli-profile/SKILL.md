@@ -1,14 +1,20 @@
 ---
 name: nuelink-cli-profile
-description: Use when a user asks to verify active auth identity with nuelink-cli me.
-triggers: who am i, check profile, verify token, confirm account identity
-boundaries: Read-only profile checks only; do not use for posting or configuration changes.
-safety: If profile mismatches expected account, stop and ask before any mutation command.
+description: Verify the active auth identity with nuelink-cli me. Use for read-only profile checks; if the account is unexpected, stop before any mutation or configuration change.
 ---
 
 # Nuelink CLI Profile
 
 Compatibility alias: this flow is now consolidated under `nuelink-cli-setup`.
+
+## How To Use
+
+Use this alias when you only need to confirm the current account identity.
+
+```bash
+nuelink-cli auth:status
+nuelink-cli me
+```
 
 ## Alias Routing
 

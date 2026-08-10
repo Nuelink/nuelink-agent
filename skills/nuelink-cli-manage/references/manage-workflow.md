@@ -12,4 +12,5 @@ nuelink-cli --json channels --brand-id BRAND_ID --per-page 25 --page 1
 
 - Stop on ambiguous brand or collection matches.
 - Validate required fields before create actions.
-- Show final command and ask for explicit confirmation before execution.
+- Run the final mutation command with `--dry-run`, show the validated payload, and ask for explicit confirmation before execution.
+- Re-run without `--dry-run` after confirmation.

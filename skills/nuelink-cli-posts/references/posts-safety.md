@@ -32,11 +32,14 @@ nuelink-cli posts:add-json \
   "title": "Post title",
   "caption": "Post body",
   "publishMode": "SCHEDULE",
-  "scheduledAt": "2026-08-01 16:00:00"
+  "scheduledAt": "YYYY-MM-DD HH:mm:ss"
 }
 ```
 
 ## Guardrail
 
 - Use `DRAFT` when user intent is ambiguous.
+- Resolve the placeholder to a future date and time in the brand's timezone.
+- Run the complete mutation with `--dry-run` before requesting confirmation.
 - Require explicit confirmation for queue, schedule, and immediate publish.
+- Re-run without `--dry-run` after confirmation.
