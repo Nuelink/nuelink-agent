@@ -2,7 +2,7 @@
 
 These are the public API endpoint patterns used by the current skill set.
 
-Base URL: `https://nuelink.com/api/public/v1`. Every request uses
+Base URL: `https://app.nuelink.com/api/public/v1`. Every request uses
 `Authorization: Bearer <token>`. List endpoints accept `page` (minimum `1`)
 and `per_page` (`1` through `100`, default `25`).
 
