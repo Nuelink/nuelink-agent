@@ -15,6 +15,7 @@ Use this alias when the request is only about install, login, logout, or checkin
 
 ```bash
 npm install -g @nuelink/nuelink-cli
+nuelink-cli --version
 printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
 nuelink-cli auth:status
 ```
@@ -38,6 +39,7 @@ Reference: `./references/auth-flow.md`
 ## Requirements
 
 - Node.js 18.17 or higher
+- Nuelink CLI 1.4.1 or higher
 
 ## Install
 
@@ -94,13 +96,9 @@ The CLI resolves credentials in this order:
 - Windows: `%USERPROFILE%/.nuelink-cli/config.json`
 - macOS/Linux: `$HOME/.nuelink-cli/config.json`
 
-Example file:
-
-```json
-{
-  "apiKey": "..."
-}
-```
+CLI 1.4.1 stores saved credentials in encrypted fields and automatically
+migrates legacy plaintext configuration. Treat this file as CLI-managed and do
+not edit or copy it between machines.
 
 ## Quick Verification Flow
 

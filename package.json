@@ -24,6 +24,6 @@
     "node": ">=20"
   },
   "dependencies": {
-    "@nuelink/nuelink-cli": "^1.4.0"
+    "@nuelink/nuelink-cli": "^1.4.1"
   }
 }

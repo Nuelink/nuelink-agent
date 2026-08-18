@@ -4,6 +4,7 @@
 
 ```bash
 npm install -g @nuelink/nuelink-cli
+nuelink-cli --version
 printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
 nuelink-cli auth:status
 nuelink-cli me
