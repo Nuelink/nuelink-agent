@@ -19,7 +19,7 @@ nuelink-cli collections:create --brand-id BRAND_ID --title "Collection Title" --
 ## Alias Routing
 
 - Primary skill: `nuelink-cli-manage`
-- Reference: `../nuelink-cli-manage/references/manage-workflow.md`
+- Primary reference: [manage workflow](../../skills/nuelink-cli-manage/references/manage-workflow.md)
 
 Use this skill to manage collections within a brand.
 
@@ -36,19 +36,20 @@ Reference: `./references/collections-workflow.md`
 ## List Collections
 
 ```bash
-nuelink-cli collections --brand-id 13493 --per-page 25 --page 1
+nuelink-cli collections --brand-id SAMPLE_BRAND_ID --per-page 25 --page 1
 ```
 
 ## Create Collection
 
 ```bash
 nuelink-cli collections:create \
-  --brand-id 13493 \
+  --brand-id SAMPLE_BRAND_ID \
   --title "My Collection" \
   --description "Collection from CLI" \
   --max-republish 5 \
-  --channels "300294,60112" \
-  --queues "Mon 10:10,Mon 12:12"
+  --channels "SAMPLE_CHANNEL_ID_1,SAMPLE_CHANNEL_ID_2" \
+  --queues "Mon 10:10,Mon 12:12" \
+  --dry-run
 ```
 
 ## Examples

@@ -10,7 +10,8 @@ nuelink-cli automations:create \
   --import-as-type IMAGE \
   --sub-type RSS \
   --title "Automation Title" \
-  --type FEED
+  --type FEED \
+  --dry-run
 ```
 
 ## Expected Endpoints

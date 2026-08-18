@@ -10,7 +10,8 @@ Start with the smallest skill that matches the task, then follow the examples in
 - List brands, channels, collections, automations, or media, then create safely: [nuelink-cli-manage/SKILL.md](nuelink-cli-manage/SKILL.md)
 - Upload media or publish posts: [nuelink-cli-publish/SKILL.md](nuelink-cli-publish/SKILL.md)
 
-Compatibility aliases still work, but they only point back to the canonical skills.
+Compatibility aliases are not part of the default bundle. They remain available
+under `compatibility-skills/` as an opt-in migration package.
 
 ## Canonical Skills
 
@@ -27,7 +28,9 @@ Compatibility aliases still work, but they only point back to the canonical skil
 
 ## Compatibility Aliases
 
-The original 9 skill folders are retained for backward compatibility and route users to the canonical skills above.
+The original 9 skills are retained under `compatibility-skills/` and route users
+to the canonical skills above. Copy or package that directory only when migrating
+an installation that still references an old skill name.
 
 Each skill contains:
 

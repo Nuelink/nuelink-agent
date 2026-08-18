@@ -7,7 +7,7 @@ description: List or safely create brand resources with nuelink-cli, including c
 
 Use this skill to discover resources and perform safe non-post mutations.
 
-Reference: `./references/manage-workflow.md`
+Read [the manage workflow](references/manage-workflow.md) for discovery and mutation guardrails.
 
 ## How To Use
 
@@ -37,7 +37,7 @@ nuelink-cli media --brand-id BRAND_ID
 4. Obtain explicit user confirmation before create.
 5. Run the same command without `--dry-run`, then return the created ID and key status fields.
 
-## Mutation Commands
+## Mutation Previews
 
 Create collection:
 
@@ -48,7 +48,8 @@ nuelink-cli collections:create \
   --description "Collection Description" \
   --max-republish 5 \
   --channels "CHANNEL_ID_1,CHANNEL_ID_2" \
-  --queues "Mon 10:10,Wed 14:30"
+  --queues "Mon 10:10,Wed 14:30" \
+  --dry-run
 ```
 
 Create automation:
@@ -61,8 +62,14 @@ nuelink-cli automations:create \
   --import-as-type IMAGE \
   --sub-type RSS \
   --title "Automation Title" \
-  --type FEED
+  --type FEED \
+  --dry-run
 ```
+
+## Confirmed Execution Only
+
+After the user confirms the preview, repeat the same complete command without
+`--dry-run`. Do not use an abbreviated command that could change the payload.
 
 ## Keep It Simple
 

@@ -19,7 +19,7 @@ nuelink-cli automations:create --brand-id BRAND_ID --collection-id COLLECTION_ID
 ## Alias Routing
 
 - Primary skill: `nuelink-cli-manage`
-- Reference: `../nuelink-cli-manage/references/manage-workflow.md`
+- Primary reference: [manage workflow](../../skills/nuelink-cli-manage/references/manage-workflow.md)
 
 Use this skill to inspect and create automations.
 
@@ -36,22 +36,23 @@ Reference: `./references/automations-workflow.md`
 ## List Automations
 
 ```bash
-nuelink-cli automations --brand-id 13493
+nuelink-cli automations --brand-id SAMPLE_BRAND_ID
 ```
 
 ## Create Automation
 
 ```bash
 nuelink-cli automations:create \
-  --brand-id 13493 \
-  --collection-id 720 \
+  --brand-id SAMPLE_BRAND_ID \
+  --collection-id SAMPLE_COLLECTION_ID \
   --feed-url "https://www.nasa.gov/rss/dyn/breaking_news.rss" \
   --import-as-type IMAGE \
   --sub-type RSS \
   --title "NASA Breaking News" \
   --type FEED \
   --dynamic-title "{{title}}" \
-  --dynamic-body "{title} {link}"
+  --dynamic-body "{title} {link}" \
+  --dry-run
 ```
 
 ## Examples

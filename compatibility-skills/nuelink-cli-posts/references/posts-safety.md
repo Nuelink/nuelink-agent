@@ -15,7 +15,8 @@ nuelink-cli posts:create \
   --collection-id COLLECTION_ID \
   --title "Post title" \
   --caption "Post body" \
-  --publish-mode DRAFT
+  --publish-mode DRAFT \
+  --dry-run
 ```
 
 ## Scheduled Create Template
@@ -24,7 +25,8 @@ nuelink-cli posts:create \
 nuelink-cli posts:add-json \
   --brand-id BRAND_ID \
   --collection-id COLLECTION_ID \
-  --payload ./post.json
+  --payload ./post.json \
+  --dry-run
 ```
 
 ```json

@@ -13,13 +13,13 @@ Use this alias when the request is about listing posts or creating one post.
 
 ```bash
 nuelink-cli posts --brand-id BRAND_ID --collection-id COLLECTION_ID
-nuelink-cli posts:create --brand-id BRAND_ID --collection-id COLLECTION_ID --title "Post title" --publish-mode DRAFT
+nuelink-cli posts:create --brand-id BRAND_ID --collection-id COLLECTION_ID --title "Post title" --publish-mode DRAFT --dry-run
 ```
 
 ## Alias Routing
 
 - Primary skill: `nuelink-cli-publish`
-- Reference: `../nuelink-cli-publish/references/publish-workflow.md`
+- Primary reference: [publish workflow](../../skills/nuelink-cli-publish/references/publish-workflow.md)
 
 Use this skill to list and create posts in a collection.
 
@@ -36,13 +36,13 @@ Reference: `./references/posts-safety.md`
 ## List Posts
 
 ```bash
-nuelink-cli posts --brand-id 13493 --collection-id 33273
+nuelink-cli posts --brand-id SAMPLE_BRAND_ID --collection-id SAMPLE_COLLECTION_ID
 ```
 
 ## Create Post From JSON
 
 ```bash
-nuelink-cli posts:add-json --brand-id 13493 --collection-id 33273 --payload ./post.json
+nuelink-cli posts:add-json --brand-id SAMPLE_BRAND_ID --collection-id SAMPLE_COLLECTION_ID --payload ./post.json --dry-run
 ```
 
 Example `post.json`:
@@ -64,7 +64,7 @@ API-style payload example from Postman:
   "publishMode": "DRAFT",
   "media": [
     {
-      "id": "bWVkaWEvWThQT0NxWWFRcEtIRXZYMW16U0hsZFRnN0hFdEpYVzIubXA0"
+      "id": "SAMPLE_MEDIA_ID"
     }
   ]
 }
@@ -74,13 +74,14 @@ API-style payload example from Postman:
 
 ```bash
 nuelink-cli posts:create \
-  --brand-id 13493 \
-  --collection-id 33273 \
+  --brand-id SAMPLE_BRAND_ID \
+  --collection-id SAMPLE_COLLECTION_ID \
   --title "title here" \
   --caption "body here" \
   --publish-mode DRAFT \
-  --media-ids "media-id-1" \
-  --youtube-tags "tag1,tag2"
+  --media-ids "SAMPLE_MEDIA_ID" \
+  --youtube-tags "tag1,tag2" \
+  --dry-run
 ```
 
 ## Examples

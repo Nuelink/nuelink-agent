@@ -23,7 +23,7 @@ The format is based on Keep a Changelog, and this project follows Semantic Versi
 - Skill-local reference guides under `skills/<skill>/references/` for portable installation.
 - Safety-first mutation workflow guidance across create/upload/publish skills.
 - Trigger and boundary metadata in skill frontmatter for better routing.
-- Plugin metadata scaffold at `agents/openai.yaml`.
+- Native Codex and Claude Code plugin manifests with `.mcp.json` remote MCP configuration.
 - Canonical 3-skill architecture: `nuelink-cli-setup`, `nuelink-cli-manage`, `nuelink-cli-publish`.
 - Behavior fixture test harness at `tests/behavior/fixtures.json`.
 - Behavior validation script at `scripts/validate-behavior.mjs`.

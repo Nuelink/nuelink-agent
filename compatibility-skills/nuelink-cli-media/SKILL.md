@@ -19,7 +19,7 @@ nuelink-cli media:upload --brand-id BRAND_ID --file ./assets/image.jpg --dry-run
 ## Alias Routing
 
 - Primary skill: `nuelink-cli-manage`
-- Reference: `../nuelink-cli-manage/references/manage-workflow.md`
+- Primary reference: [manage workflow](../../skills/nuelink-cli-manage/references/manage-workflow.md)
 
 Use this skill to manage media assets in a brand.
 
@@ -36,13 +36,13 @@ Reference: `./references/media-workflow.md`
 ## List Media
 
 ```bash
-nuelink-cli media --brand-id 13493 --type IMAGE
+nuelink-cli media --brand-id SAMPLE_BRAND_ID --type IMAGE
 ```
 
 ## Upload Media
 
 ```bash
-nuelink-cli media:upload --brand-id 13493 --file ./assets/image.jpg
+nuelink-cli media:upload --brand-id SAMPLE_BRAND_ID --file ./assets/image.jpg --dry-run
 ```
 
 ## Examples

@@ -19,7 +19,7 @@ nuelink-cli --json brands --per-page 25 --page 1
 ## Alias Routing
 
 - Primary skill: `nuelink-cli-manage`
-- Reference: `../nuelink-cli-manage/references/manage-workflow.md`
+- Primary reference: [manage workflow](../../skills/nuelink-cli-manage/references/manage-workflow.md)
 
 Use this skill to list brands and page through results.
 

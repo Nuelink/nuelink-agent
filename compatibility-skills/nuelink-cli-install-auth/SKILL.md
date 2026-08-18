@@ -22,7 +22,7 @@ nuelink-cli auth:status
 ## Alias Routing
 
 - Primary skill: `nuelink-cli-setup`
-- Reference: `../nuelink-cli-setup/references/setup-workflow.md`
+- Primary reference: [setup workflow](../../skills/nuelink-cli-setup/references/setup-workflow.md)
 
 ## Legacy Scope (Still Supported)
 

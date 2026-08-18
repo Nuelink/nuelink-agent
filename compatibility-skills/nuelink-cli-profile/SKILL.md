@@ -19,7 +19,7 @@ nuelink-cli me
 ## Alias Routing
 
 - Primary skill: `nuelink-cli-setup`
-- Reference: `../nuelink-cli-setup/references/setup-workflow.md`
+- Primary reference: [setup workflow](../../skills/nuelink-cli-setup/references/setup-workflow.md)
 
 Use this skill when you need to validate auth and inspect the current account identity.
 

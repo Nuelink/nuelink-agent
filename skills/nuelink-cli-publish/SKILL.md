@@ -7,14 +7,14 @@ description: Upload media and list, draft, queue, schedule, or publish posts wit
 
 Use this skill to run safe end-to-end publishing workflows.
 
-Reference: `./references/publish-workflow.md`
+Read [the publish workflow](references/publish-workflow.md) for scheduling and confirmation guardrails.
 
 ## How To Use
 
 Use this skill when the task ends with media upload or post creation.
 
 ```bash
-nuelink-cli media:upload --brand-id BRAND_ID --file ./assets/image.jpg
+nuelink-cli media:upload --brand-id BRAND_ID --file ./assets/image.jpg --dry-run
 nuelink-cli posts --brand-id BRAND_ID --collection-id COLLECTION_ID
 ```
 
@@ -38,7 +38,7 @@ nuelink-cli posts --brand-id BRAND_ID --collection-id COLLECTION_ID
 Upload media:
 
 ```bash
-nuelink-cli media:upload --brand-id BRAND_ID --file ./assets/image.jpg
+nuelink-cli media:upload --brand-id BRAND_ID --file ./assets/image.jpg --dry-run
 ```
 
 Create draft post:
@@ -49,7 +49,8 @@ nuelink-cli posts:create \
   --collection-id COLLECTION_ID \
   --title "Post title" \
   --caption "Post body" \
-  --publish-mode DRAFT
+  --publish-mode DRAFT \
+  --dry-run
 ```
 
 Create scheduled post with JSON payload:
@@ -58,8 +59,15 @@ Create scheduled post with JSON payload:
 nuelink-cli posts:add-json \
   --brand-id BRAND_ID \
   --collection-id COLLECTION_ID \
-  --payload ./post.json
+  --payload ./post.json \
+  --dry-run
 ```
+
+## Confirmed Execution Only
+
+After explicit confirmation, repeat the fully validated upload or post command
+without `--dry-run`. Keep `publishMode=DRAFT` unless the user explicitly chose
+`QUEUE`, `SCHEDULE`, or `IMMEDIATE`.
 
 ## Simple Rule
 

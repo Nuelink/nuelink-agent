@@ -1,0 +1,25 @@
+{
+  "name": "nuelink-agent",
+  "version": "1.0.0",
+  "description": "Safe Nuelink CLI workflows and remote MCP connectivity for Codex.",
+  "author": {
+    "name": "Nuelink",
+    "url": "https://nuelink.com"
+  },
+  "homepage": "https://github.com/Nuelink/nuelink-agent",
+  "repository": "https://github.com/Nuelink/nuelink-agent",
+  "license": "MIT",
+  "keywords": ["nuelink", "social-media", "mcp", "agent-skills"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Nuelink Agent",
+    "shortDescription": "Manage and publish Nuelink content safely.",
+    "longDescription": "Discover Nuelink resources, preview mutations, create drafts, and connect to the Nuelink remote MCP server.",
+    "developerName": "Nuelink",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://nuelink.com",
+    "defaultPrompt": "Use the safest Nuelink workflow for my request."
+  },
+  "mcpServers": "./.mcp.json"
+}

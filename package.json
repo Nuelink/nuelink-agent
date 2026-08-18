@@ -3,11 +3,21 @@
   "version": "1.0.0",
   "private": true,
   "description": "Skills repository for common Nuelink CLI workflows.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nuelink/nuelink-agent.git"
+  },
+  "homepage": "https://github.com/Nuelink/nuelink-agent",
+  "bugs": {
+    "url": "https://github.com/Nuelink/nuelink-agent/issues"
+  },
   "type": "module",
   "scripts": {
     "validate": "node scripts/validate-skills.mjs",
     "validate:behavior": "node scripts/validate-behavior.mjs",
-    "validate:all": "npm run validate && npm run validate:behavior",
+    "validate:contracts": "node scripts/validate-contracts.mjs",
+    "validate:installer": "node scripts/validate-installer.mjs",
+    "validate:all": "npm run validate && npm run validate:behavior && npm run validate:contracts",
     "lint:md": "npx --yes markdownlint-cli2 \"**/*.md\" \"#node_modules\""
   },
   "engines": {

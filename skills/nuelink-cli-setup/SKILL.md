@@ -7,7 +7,7 @@ description: Install nuelink-cli, authenticate, verify identity, or troubleshoot
 
 Use this skill for installation, authentication, identity verification, and operational readiness checks.
 
-Reference: `./references/setup-workflow.md`
+Read [the setup workflow](references/setup-workflow.md) for auth troubleshooting and operational checks.
 
 ## How To Use
 

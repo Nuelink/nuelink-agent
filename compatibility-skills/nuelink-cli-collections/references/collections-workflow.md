@@ -9,7 +9,8 @@ nuelink-cli collections:create \
   --description "Collection Description" \
   --max-republish 5 \
   --channels "CHANNEL_ID_1,CHANNEL_ID_2" \
-  --queues "Mon 10:10,Wed 14:30"
+  --queues "Mon 10:10,Wed 14:30" \
+  --dry-run
 ```
 
 ## Expected Endpoints

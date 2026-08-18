@@ -37,7 +37,7 @@
     {
       "id": "legacy-alias-posts",
       "description": "Legacy posts skill points to consolidated publish skill",
-      "file": "skills/nuelink-cli-posts/SKILL.md",
+      "file": "compatibility-skills/nuelink-cli-posts/SKILL.md",
       "mustContain": [
         "Compatibility alias",
         "Primary skill: `nuelink-cli-publish`"
@@ -46,7 +46,7 @@
     {
       "id": "legacy-alias-automations",
       "description": "Legacy automations skill points to consolidated manage skill",
-      "file": "skills/nuelink-cli-automations/SKILL.md",
+      "file": "compatibility-skills/nuelink-cli-automations/SKILL.md",
       "mustContain": [
         "Compatibility alias",
         "Primary skill: `nuelink-cli-manage`"

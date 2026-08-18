@@ -42,7 +42,8 @@ Overview of what each top-level folder and file is responsible for.
 - Canonical skills are `nuelink-cli-setup`, `nuelink-cli-manage`, and `nuelink-cli-publish`.
 - `skills/<skill>/references/` keeps each installed skill self-contained.
 - `examples/` contains sanitized request/response JSON used by skills.
-- `agents/openai.yaml` contains plugin metadata for multi-skill distribution workflows.
+- `.codex-plugin/plugin.json` and `.claude-plugin/plugin.json` are the native Codex and Claude Code manifests; `.mcp.json` connects the remote Nuelink MCP server.
+- `compatibility-skills/` is an opt-in migration bundle for the nine legacy aliases.
 - `scripts/validate-skills.mjs` enforces metadata and structure consistency.
 - `scripts/validate-behavior.mjs` enforces safety and routing behavior expectations.
 - CI runs markdown lint, skill validation, and behavior validation on pull requests.

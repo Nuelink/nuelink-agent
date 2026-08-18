@@ -19,7 +19,7 @@ nuelink-cli --json channels --brand-id BRAND_ID --per-page 25 --page 1
 ## Alias Routing
 
 - Primary skill: `nuelink-cli-manage`
-- Reference: `../nuelink-cli-manage/references/manage-workflow.md`
+- Primary reference: [manage workflow](../../skills/nuelink-cli-manage/references/manage-workflow.md)
 
 Use this skill to retrieve channels for a brand.
 
@@ -30,13 +30,13 @@ Reference: `./references/channel-discovery.md`
 Table output:
 
 ```bash
-nuelink-cli channels --brand-id 13493 --per-page 25 --page 1
+nuelink-cli channels --brand-id SAMPLE_BRAND_ID --per-page 25 --page 1
 ```
 
 JSON output:
 
 ```bash
-nuelink-cli --json channels --brand-id 13493 --per-page 25 --page 1
+nuelink-cli --json channels --brand-id SAMPLE_BRAND_ID --per-page 25 --page 1
 ```
 
 ## Expected API Result

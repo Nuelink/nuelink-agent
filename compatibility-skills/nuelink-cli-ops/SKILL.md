@@ -19,7 +19,7 @@ nuelink-cli auth:status
 ## Alias Routing
 
 - Primary skill: `nuelink-cli-setup`
-- Reference: `../nuelink-cli-setup/references/setup-workflow.md`
+- Primary reference: [setup workflow](../../skills/nuelink-cli-setup/references/setup-workflow.md)
 
 Use this skill for production-oriented CLI usage.
 
@@ -36,7 +36,7 @@ nuelink-cli --json brands --per-page 25 --page 1
 Default timeout is 30000ms. Override when needed:
 
 ```bash
-NUELINK_TIMEOUT_MS=120000 nuelink-cli media --brand-id 13493
+NUELINK_TIMEOUT_MS=120000 nuelink-cli media --brand-id SAMPLE_BRAND_ID
 ```
 
 ## Auth Troubleshooting

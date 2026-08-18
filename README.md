@@ -12,7 +12,7 @@ This repo packages practical, copy-paste workflows for auth, brands, collections
 npx skills add Nuelink/nuelink-agent
 ```
 
-2. Install and authenticate the CLI.
+1. Install and authenticate the CLI.
 
 ```bash
 npm install -g @nuelink/nuelink-cli
@@ -20,7 +20,7 @@ printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
 nuelink-cli auth:status
 ```
 
-3. Pick the smallest skill that matches the task.
+1. Pick the smallest skill that matches the task.
 
 - Setup and auth: [skills/nuelink-cli-setup/SKILL.md](skills/nuelink-cli-setup/SKILL.md)
 - Resource discovery and safe create flows: [skills/nuelink-cli-manage/SKILL.md](skills/nuelink-cli-manage/SKILL.md)
@@ -33,6 +33,10 @@ Ecosystem installer:
 ```bash
 npx skills add Nuelink/nuelink-agent
 ```
+
+The installer command is `npx skills add` (not `npm add skills`). It discovers
+only the three canonical skills; legacy aliases under `compatibility-skills/`
+remain opt-in for migrations.
 
 Native local locations (Codex/OpenAI agent runtime):
 
@@ -116,7 +120,11 @@ npm run lint:md
 npm run validate
 npm run validate:behavior
 npm run validate:all
+npm run validate:installer
 ```
+
+`validate:installer` uses the pinned `skills` CLI version to discover and copy
+the package into an isolated temporary project for Codex and Claude Code.
 
 ## Repository Layout
 
