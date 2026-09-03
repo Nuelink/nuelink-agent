@@ -51,6 +51,7 @@ Example `post.json`:
 {
   "title": "CLI Post Title",
   "caption": "Post body from CLI",
+  "autoThreadText": true,
   "publishMode": "DRAFT"
 }
 ```
@@ -61,6 +62,7 @@ API-style payload example from Postman:
 {
   "title": "title here",
   "caption": "body here as well",
+  "autoThreadText": true,
   "publishMode": "DRAFT",
   "media": [
     {

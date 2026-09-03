@@ -13,6 +13,7 @@
 {
   "title": "Post title",
   "caption": "Post body",
+  "autoThreadText": null,
   "publishMode": "SCHEDULE",
   "scheduledAt": "YYYY-MM-DD HH:mm:ss"
 }
