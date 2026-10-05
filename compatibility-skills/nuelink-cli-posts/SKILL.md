@@ -37,6 +37,9 @@ Reference: `./references/posts-safety.md`
 
 ```bash
 nuelink-cli posts --brand-id SAMPLE_BRAND_ID --collection-id SAMPLE_COLLECTION_ID
+nuelink-cli posts --brand-id SAMPLE_BRAND_ID --collection-id SAMPLE_COLLECTION_ID \
+  --status PENDING --post-type IMAGE --posting-type SCHEDULE \
+  --created-from "2026-10-01 00:00:00" --sort-by post_date --sort-order desc
 ```
 
 ## Create Post From JSON
@@ -105,3 +108,6 @@ nuelink-cli posts:create \
 - Supported publish modes are `DRAFT`, `QUEUE`, `SCHEDULE`, and `IMMEDIATE`.
 - Scheduled values use `YYYY-MM-DD HH:mm:ss`; poll option indexes are
   zero-based.
+- List filters include status, post type, posting type, UTC creation-time
+  boundaries, and deterministic sorting. `--created-to` must not precede
+  `--created-from`.

@@ -33,7 +33,14 @@ List posts:
 
 ```bash
 nuelink-cli posts --brand-id BRAND_ID --collection-id COLLECTION_ID
+nuelink-cli posts --brand-id BRAND_ID --collection-id COLLECTION_ID \
+  --status PENDING --post-type IMAGE --posting-type SCHEDULE \
+  --created-from "2026-10-01 00:00:00" --sort-by post_date --sort-order desc
 ```
+
+Post listing also supports `--created-to`; use UTC timestamps in
+`YYYY-MM-DD HH:mm:ss` format and ensure `--created-to` is not earlier than
+`--created-from`.
 
 Upload media:
 

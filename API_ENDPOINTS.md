@@ -10,6 +10,7 @@ and `per_page` (`1` through `100`, default `25`).
 
 | Endpoint | Method | Purpose |
 | --- | --- | --- |
+| `/api/public/v1/auth` | `GET` | Validate an API token and return its profile |
 | `/api/public/v1/me` | `GET` | Get current authenticated profile |
 
 ## Brands
@@ -52,9 +53,15 @@ and `per_page` (`1` through `100`, default `25`).
 | `/api/public/v1/brands/:brand_id/collections/:collection_id/posts` | `GET` | List posts |
 | `/api/public/v1/brands/:brand_id/collections/:collection_id/posts` | `POST` | Create post |
 
+Post listing additionally accepts `status` (`PENDING`, `DRAFT`, `PUBLISHED`),
+`post_type`, `posting_type`, `created_from`, `created_to`, `sort_by`, and
+`sort_order`. Creation date filters use `YYYY-MM-DD HH:mm:ss` UTC timestamps;
+`created_to` must not precede `created_from`.
+
 ## Notes
 
 - Media listing additionally accepts `type`: `IMAGE`, `VIDEO`, `GIF`,
   `APPLICATION`, `DOCUMENT`, or `CSV`.
+- Media uploads accept JPEG, PNG, BMP, MP4, MOV, or PDF files up to 100 MiB.
 - Scheduled posts use `scheduledAt` in `YYYY-MM-DD HH:mm:ss` format.
 - Example payloads and responses are in [examples/](examples).
