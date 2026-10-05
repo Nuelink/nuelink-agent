@@ -47,11 +47,10 @@ nuelink-cli automations:create \
   --collection-id SAMPLE_COLLECTION_ID \
   --feed-url "https://www.nasa.gov/rss/dyn/breaking_news.rss" \
   --import-as-type IMAGE \
-  --sub-type RSS \
-  --title "NASA Breaking News" \
-  --type FEED \
-  --dynamic-title "{{title}}" \
-  --dynamic-body "{title} {link}" \
+  --name "NASA Breaking News" \
+  --type RSS \
+  --title "{{title}}" \
+  --caption "{{description}} {{link}}" \
   --dry-run
 ```
 
@@ -68,11 +67,10 @@ nuelink-cli automations:create \
 
 ## Notes
 
-- Required: `--brand-id`, `--collection-id`, `--feed-url`, `--import-as-type`, `--sub-type`, `--title`.
-- Optional fields: `--description`, `--type`, `--dynamic-title`,
-  `--dynamic-body`, `--load-old-posts`, `--add-posts-as-draft`, and
+- Required: `--brand-id`, `--collection-id`, `--feed-url`, `--import-as-type`, `--name`, and `--type`.
+- Optional fields: `--title`, `--caption`, `--load-old-posts`, `--add-posts-as-draft`, and
   `--refresh-rate` (`24`, `12`, `6`, or `1`).
 - `--import-as-type` accepts `LINK`, `IMAGE`, `VIDEO`, or `CAROUSEL`.
-- `--sub-type` accepts the feed subtypes defined by the OpenAPI contract; run
+- `--type` accepts the feed types defined by the OpenAPI contract; run
   `nuelink-cli help automations:create` for the command reference.
 - Use placeholder IDs in examples; never ship real account IDs.

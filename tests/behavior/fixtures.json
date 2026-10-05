@@ -51,6 +51,25 @@
         "Compatibility alias",
         "Primary skill: `nuelink-cli-manage`"
       ]
+    },
+    {
+      "id": "publish-delete-confirmation",
+      "description": "Post deletion is treated as irreversible and explicitly confirmed",
+      "file": "skills/nuelink-cli-publish/SKILL.md",
+      "mustContain": [
+        "Treat deletion as irreversible",
+        "Require separate explicit confirmation immediately before any `posts:delete` execution"
+      ]
+    },
+    {
+      "id": "publish-new-read-commands",
+      "description": "Publish skill exposes schedule, brand post, and result discovery",
+      "file": "skills/nuelink-cli-publish/SKILL.md",
+      "mustContain": [
+        "nuelink-cli schedule",
+        "nuelink-cli brand-posts",
+        "nuelink-cli published-posts"
+      ]
     }
   ]
 }

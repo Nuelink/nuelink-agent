@@ -1,0 +1,24 @@
+{
+  "status": "success",
+  "data": {
+    "timezone": "UTC",
+    "queueStatus": "ACTIVE",
+    "schedule": {
+      "MON": [
+        {
+          "time": "09:30",
+          "queueId": 910,
+          "collectionId": 2001,
+          "collectionTitle": "Sample Collection",
+          "collectionStatus": "ACTIVE"
+        }
+      ],
+      "TUE": [],
+      "WED": [],
+      "THU": [],
+      "FRI": [],
+      "SAT": [],
+      "SUN": []
+    }
+  }
+}

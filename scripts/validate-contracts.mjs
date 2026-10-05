@@ -24,7 +24,15 @@ for (const file of filesUnder(root).filter((file) => file.endsWith(".json") && !
   JSON.parse(fs.readFileSync(file, "utf8"));
 }
 
-const mutationCommands = ["collections:create", "automations:create", "media:upload", "posts:create", "posts:add-json"];
+const mutationCommands = [
+  "collections:create",
+  "automations:create",
+  "media:upload",
+  "posts:create",
+  "posts:add-json",
+  "posts:update",
+  "posts:delete",
+];
 for (const skillRoot of [path.join(root, "skills"), path.join(root, "compatibility-skills")]) {
   for (const file of filesUnder(skillRoot).filter((file) => file.endsWith(".md"))) {
     const content = fs.readFileSync(file, "utf8");
@@ -37,7 +45,9 @@ for (const skillRoot of [path.join(root, "skills"), path.join(root, "compatibili
   }
 }
 
-const cliPath = path.join(root, "node_modules", "@nuelink", "nuelink-cli", "src", "cli.js");
+const workspaceCliPath = path.resolve(root, "..", "nuelink-cli", "src", "cli.js");
+const installedCliPath = path.join(root, "node_modules", "@nuelink", "nuelink-cli", "src", "cli.js");
+const cliPath = fs.existsSync(workspaceCliPath) ? workspaceCliPath : installedCliPath;
 const blockerPath = path.join(root, "scripts", "network-block.cjs");
 const nodeOptionsBlockerPath = blockerPath.replaceAll("\\", "/");
 const help = spawnSync(process.execPath, [cliPath, "--help"], { encoding: "utf8" });
@@ -53,10 +63,12 @@ fs.writeFileSync(mediaPath, Buffer.from([0xff, 0xd8, 0xff, 0xd9]));
 fs.writeFileSync(payloadPath, JSON.stringify({ caption: "Preview", publishMode: "DRAFT" }));
 const dryRuns = [
   ["--dry-run", "collections:create", "--brand-id", "1", "--title", "Preview"],
-  ["--dry-run", "automations:create", "--brand-id", "1", "--collection-id", "2", "--feed-url", "https://example.com/feed.xml", "--import-as-type", "IMAGE", "--sub-type", "RSS", "--title", "Preview"],
+  ["--dry-run", "automations:create", "--brand-id", "1", "--collection-id", "2", "--feed-url", "https://example.com/feed.xml", "--import-as-type", "IMAGE", "--type", "RSS", "--name", "Preview"],
   ["--dry-run", "media:upload", "--brand-id", "1", "--file", mediaPath],
   ["--dry-run", "posts:create", "--brand-id", "1", "--collection-id", "2", "--caption", "Preview", "--publish-mode", "DRAFT"],
   ["--dry-run", "posts:add-json", "--brand-id", "1", "--collection-id", "2", "--payload", payloadPath],
+  ["--dry-run", "posts:update", "--brand-id", "1", "--post-id", "3", "--queue-position", "FRONT"],
+  ["--dry-run", "posts:delete", "--brand-id", "1", "--post-id", "3"],
 ];
 for (const args of dryRuns) {
   const result = spawnSync(process.execPath, [cliPath, ...args], {

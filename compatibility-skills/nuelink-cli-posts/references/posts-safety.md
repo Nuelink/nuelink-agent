@@ -44,4 +44,6 @@ nuelink-cli posts:add-json \
 - Resolve the placeholder to a future date and time in the brand's timezone.
 - Run the complete mutation with `--dry-run` before requesting confirmation.
 - Require explicit confirmation for queue, schedule, and immediate publish.
+- Preview `posts:update` and `posts:delete` with `--dry-run`; confirm the exact brand and post IDs.
+- Treat deletion as irreversible and require a fresh explicit confirmation immediately before execution.
 - Re-run without `--dry-run` after confirmation.

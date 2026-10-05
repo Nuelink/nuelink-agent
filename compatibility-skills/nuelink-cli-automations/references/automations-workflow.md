@@ -8,9 +8,8 @@ nuelink-cli automations:create \
   --collection-id COLLECTION_ID \
   --feed-url "https://example.com/feed.xml" \
   --import-as-type IMAGE \
-  --sub-type RSS \
-  --title "Automation Title" \
-  --type FEED \
+  --name "Automation Title" \
+  --type RSS \
   --dry-run
 ```
 

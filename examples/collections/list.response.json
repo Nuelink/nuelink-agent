@@ -5,9 +5,23 @@
       "id": 2001,
       "title": "Sample Collection",
       "description": "Collection used for documentation examples",
+      "status": "ACTIVE",
+      "evergreen": {
+        "enabled": true,
+        "maxRepublish": 5
+      },
+      "maxRepublish": 5,
+      "timezone": "UTC",
       "createdAt": "2024-01-01T00:00:00.000000Z",
       "updatedAt": "2024-01-01T00:00:00.000000Z",
-      "channels": []
+      "channels": [],
+      "queues": [],
+      "postsCount": {
+        "queued": 0,
+        "scheduled": 0,
+        "drafts": 0,
+        "published": 0
+      }
     }
   ],
   "pagination": {
