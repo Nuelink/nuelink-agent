@@ -39,7 +39,7 @@ Reference: `./references/auth-flow.md`
 ## Requirements
 
 - Node.js 18.17 or higher
-- Nuelink CLI 1.4.4 or higher
+- Nuelink CLI 1.4.5 or higher
 
 ## Install
 
@@ -96,7 +96,7 @@ The CLI resolves credentials in this order:
 - Windows: `%USERPROFILE%/.nuelink-cli/config.json`
 - macOS/Linux: `$HOME/.nuelink-cli/config.json`
 
-CLI 1.4.4 stores saved credentials in encrypted fields and automatically
+CLI 1.4.5 stores saved credentials in encrypted fields and automatically
 migrates legacy plaintext configuration. Treat this file as CLI-managed and do
 not edit or copy it between machines.
 
