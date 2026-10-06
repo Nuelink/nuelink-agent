@@ -2,12 +2,14 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "nuelink-agent",
   "displayName": "Nuelink Agent",
-  "version": "1.0.0",
-  "description": "Safe Nuelink CLI workflows and remote MCP connectivity for Claude Code.",
+  "version": "1.1.0",
+  "description": "Plan, draft, schedule, publish, automate, and review social media content with Nuelink.",
   "author": {
-    "name": "Nuelink"
+    "name": "Nuelink",
+    "email": "support@nuelink.com",
+    "url": "https://nuelink.com"
   },
-  "homepage": "https://github.com/Nuelink/nuelink-agent",
+  "homepage": "https://docs.nuelink.com",
   "repository": "https://github.com/Nuelink/nuelink-agent",
   "license": "MIT",
   "keywords": [

@@ -153,6 +153,7 @@ the package into an isolated temporary project for Codex and Claude Code.
 - Contributor guide: [CONTRIBUTING.md](CONTRIBUTING.md)
 - Security policy: [SECURITY.md](SECURITY.md)
 - Changelog: [CHANGELOG.md](CHANGELOG.md)
+- Directory submission runbook: [DISTRIBUTION.md](DISTRIBUTION.md)
 
 ## License
 

@@ -1,25 +1,99 @@
 {
   "name": "nuelink-agent",
-  "version": "1.0.0",
-  "description": "Safe Nuelink CLI workflows and remote MCP connectivity for Codex.",
+  "version": "1.1.0",
+  "description": "Plan, draft, schedule, publish, automate, and review social media content with Nuelink.",
   "author": {
     "name": "Nuelink",
+    "email": "support@nuelink.com",
     "url": "https://nuelink.com"
   },
-  "homepage": "https://github.com/Nuelink/nuelink-agent",
+  "homepage": "https://docs.nuelink.com",
   "repository": "https://github.com/Nuelink/nuelink-agent",
   "license": "MIT",
   "keywords": ["nuelink", "social-media", "mcp", "agent-skills"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Nuelink Agent",
-    "shortDescription": "Manage and publish Nuelink content safely.",
-    "longDescription": "Discover Nuelink resources, preview mutations, create drafts, and connect to the Nuelink remote MCP server.",
+    "displayName": "Nuelink",
+    "shortDescription": "Plan and publish social posts",
+    "longDescription": "Manage social content in your connected Nuelink account. Discover brands, channels, collections, schedules, and media; create drafts and automations; schedule or publish posts only when requested; and review engagement results. Content editing and account administration are not supported.",
     "developerName": "Nuelink",
     "category": "Productivity",
-    "capabilities": ["Read", "Write"],
-    "websiteURL": "https://nuelink.com",
-    "defaultPrompt": "Use the safest Nuelink workflow for my request."
+    "capabilities": [
+      "Discover brands and channels",
+      "Create draft and scheduled posts",
+      "Create feed automations",
+      "Review published-post engagement"
+    ],
+    "websiteURL": "https://nuelink.com/social-media-api",
+    "supportURL": "https://help.nuelink.com",
+    "privacyPolicyURL": "https://nuelink.com/privacy",
+    "termsOfServiceURL": "https://nuelink.com/terms",
+    "defaultPrompt": [
+      "Show my brands and their connected channels.",
+      "Create a draft post in my selected collection.",
+      "Show engagement results for my recently published posts."
+    ],
+    "composerIcon": "./assets/nuelink.png",
+    "logo": "./assets/nuelink.png"
+  },
+  "extensions": {
+    "com.openai": {
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Discover the review account's brands and connected channels.",
+              "prompt": "List my Nuelink brands, then show the connected channels for the first brand.",
+              "tools_triggered": "nuelink_list_brands, nuelink_list_channels",
+              "expected_behavior": "Return only brands and channels visible to the authenticated review account, including enough identifiers to select a target."
+            },
+            {
+              "description": "Inspect a brand's publishing schedule before creating content.",
+              "prompt": "Show the weekly posting schedule for my first Nuelink brand.",
+              "tools_triggered": "nuelink_list_brands, nuelink_get_schedule",
+              "expected_behavior": "Resolve the first accessible brand and return its timezone, queue status, and weekly queue slots."
+            },
+            {
+              "description": "Create a safe draft without publishing it.",
+              "prompt": "Create a draft in my Review collection that says: Our October product update is ready.",
+              "tools_triggered": "nuelink_list_brands, nuelink_list_collections, nuelink_create_post",
+              "expected_behavior": "Resolve the named collection, create the post with publishMode DRAFT, and report the created post identifier without publishing externally."
+            },
+            {
+              "description": "List recent posts from a selected collection.",
+              "prompt": "Show the newest five posts in my Review collection.",
+              "tools_triggered": "nuelink_list_brands, nuelink_list_collections, nuelink_list_posts",
+              "expected_behavior": "Resolve the Review collection and return at most five newest posts from that collection."
+            },
+            {
+              "description": "Review engagement for content already published by the account.",
+              "prompt": "Show engagement results for my five most recently published Nuelink posts.",
+              "tools_triggered": "nuelink_list_brands, nuelink_list_published_posts",
+              "expected_behavior": "Return the five newest published results visible to the review account with their available likes, comments, and shares."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Do not use Nuelink for email operations.",
+              "prompt": "Send an email to my customer list."
+            },
+            {
+              "description": "Do not claim to manage paid social advertising.",
+              "prompt": "Increase my Facebook ads budget by 20 percent."
+            },
+            {
+              "description": "Do not claim to edit social account credentials.",
+              "prompt": "Change the password for my Instagram account."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "The plugin manages content for an existing Nuelink account and does not sell products or process payments."
+      },
+      "publication": {
+        "release_notes": "Initial directory release with 17 stable MCP tools, draft-by-default post creation, published-post insights, and reviewed safety annotations."
+      }
+    }
   },
   "mcpServers": "./.mcp.json"
 }

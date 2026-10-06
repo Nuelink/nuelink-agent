@@ -27,6 +27,8 @@ The format is based on Keep a Changelog, and this project follows Semantic Versi
 - Canonical 3-skill architecture: `nuelink-cli-setup`, `nuelink-cli-manage`, `nuelink-cli-publish`.
 - Behavior fixture test harness at `tests/behavior/fixtures.json`.
 - Behavior validation script at `scripts/validate-behavior.mjs`.
+- Directory-ready Codex metadata with listing URLs, icon, and OpenAI review cases.
+- MCP distribution runbook covering Registry, Claude, ChatGPT, Muse, and downstream catalogs.
 
 ### Changed
 
@@ -34,3 +36,4 @@ The format is based on Keep a Changelog, and this project follows Semantic Versi
 - Updated quick-start guidance to prefer environment-variable auth in CI contexts.
 - Converted legacy 9-skill modules into compatibility aliases to preserve existing integrations.
 - Updated CI to run behavior validation in addition to structure and markdown checks.
+- Aligned the Codex and Claude plugin manifests at version 1.1.0.
