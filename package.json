@@ -1,6 +1,6 @@
 {
   "name": "nuelink-agent-skills",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "description": "Skills repository for common Nuelink CLI workflows.",
   "repository": {

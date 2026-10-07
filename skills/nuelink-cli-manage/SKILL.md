@@ -11,7 +11,7 @@ Read [the manage workflow](references/manage-workflow.md) for discovery and muta
 
 ## How To Use
 
-Use this skill when you need to list a brand resource first, then create or update something tied to that brand.
+Use this skill when you need to list brand resources or create a collection or automation. Post updates belong to `nuelink-cli-publish`.
 
 ```bash
 nuelink-cli brands --per-page 25 --page 1
@@ -35,7 +35,8 @@ nuelink-cli media --brand-id BRAND_ID
 2. Validate payload fields and required enums.
 3. Run the exact create command with `--dry-run` and show the validated payload.
 4. Obtain explicit user confirmation before create.
-5. Run the same command without `--dry-run`, then return the created ID and key status fields.
+5. Run the same command without `--dry-run`, then read the resource back by ID or through its list command and compare the returned ID and key status fields with the request.
+6. For media, allow for processing delay and retry read-only listing before treating a new upload as missing.
 
 ## Mutation Previews
 
@@ -64,10 +65,17 @@ nuelink-cli automations:create \
   --type RSS \
   --title "{{title}}" \
   --caption "{{description}} {{link}}" \
+  --load-old-posts false \
+  --add-posts-as-draft true \
   --dry-run
 ```
 
 ## Confirmed Execution Only
+
+New RSS automations should set `--load-old-posts false` and
+`--add-posts-as-draft true` explicitly. Read the automation back; its list
+response may omit these import-policy settings, so do not claim they were
+independently verified if they are not returned.
 
 After the user confirms the preview, repeat the same complete command without
 `--dry-run`. Do not use an abbreviated command that could change the payload.

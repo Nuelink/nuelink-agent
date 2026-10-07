@@ -9,13 +9,16 @@ This repo packages practical, copy-paste workflows for auth, brands, collections
 1. Install the skills pack.
 
 ```bash
-npx skills add Nuelink/nuelink-agent
+npx --yes skills@1.5.22 add Nuelink/nuelink-agent
 ```
 
 1. Install and authenticate the CLI.
 
+The CLI requires Node.js 18.17 or later. The Skills repository's development
+and validation scripts require Node.js 20 or later.
+
 ```bash
-npm install -g @nuelink/nuelink-cli
+npm install -g @nuelink/nuelink-cli@1.5.0
 printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
 nuelink-cli auth:status
 ```
@@ -31,7 +34,7 @@ nuelink-cli auth:status
 Ecosystem installer:
 
 ```bash
-npx skills add Nuelink/nuelink-agent
+npx --yes skills@1.5.22 add Nuelink/nuelink-agent
 ```
 
 The installer command is `npx skills add` (not `npm add skills`). It discovers
@@ -42,6 +45,10 @@ Native local locations (Codex/OpenAI agent runtime):
 
 - Repository scoped: `.agents/skills/`
 - User scoped: `$HOME/.agents/skills/`
+
+For other runtimes, copy each of the three directories under `skills/` intact,
+including its `references/` folder, into the runtime's documented Skill root.
+Restart or re-index that runtime so it discovers the copied Skills.
 
 Only install skills from repositories you trust. Skills are executable instructions.
 
@@ -59,12 +66,15 @@ Only install skills from repositories you trust. Skills are executable instructi
 1. Install and authenticate the CLI:
 
 ```bash
-npm install -g @nuelink/nuelink-cli
+npm install -g @nuelink/nuelink-cli@1.5.0
 printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
 nuelink-cli auth:status
 ```
 
-For CI, prefer `NUELINK_API_KEY` environment variable over saved local config.
+For CI, inject `NUELINK_API_KEY` through the platform's secret manager. Avoid
+printing the environment or passing the key as a command-line argument, and
+limit its inheritance to steps that need it. Saved-config encryption is
+obfuscation; filesystem permissions are the protection boundary.
 
 1. Run a first call:
 

@@ -14,3 +14,6 @@ nuelink-cli --json channels --brand-id BRAND_ID --per-page 25 --page 1
 - Validate required fields before create actions.
 - Run the final mutation command with `--dry-run`, show the validated payload, and ask for explicit confirmation before execution.
 - Re-run without `--dry-run` after confirmation.
+- Read the created collection or automation back by ID/listing and compare its returned ID and visible settings with the requested values. The automation listing may omit some import options; do not claim those persisted values were verified when they are not returned.
+- After upload, retry read-only media listing with a reasonable delay if the new ID is not immediately visible; uploads can remain in processing before appearing.
+- If a mutation times out or returns a server error, inspect the relevant list/read endpoint before retrying; do not resend a create blindly because the first request may have succeeded.

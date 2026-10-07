@@ -13,8 +13,12 @@ Read [the setup workflow](references/setup-workflow.md) for auth troubleshooting
 
 Use this skill first when you need to install the CLI or confirm which account is active.
 
+The CLI requires Node.js 18.17 or later. The Agent Skills repository's development
+scripts require Node.js 20 or later. Install the fixed CLI release explicitly;
+older versions do not preserve nullable JSON fields or enforce trusted API hosts.
+
 ```bash
-npm install -g @nuelink/nuelink-cli
+npm install -g @nuelink/nuelink-cli@1.5.0
 nuelink-cli --version
 printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
 nuelink-cli auth:status
@@ -25,7 +29,7 @@ nuelink-cli me
 ## Core Workflow
 
 ```bash
-npm install -g @nuelink/nuelink-cli
+npm install -g @nuelink/nuelink-cli@1.5.0
 nuelink-cli --version
 printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
 nuelink-cli auth:status
@@ -35,8 +39,11 @@ nuelink-cli me
 
 ## CI-Safe Workflow
 
+Provide `NUELINK_API_KEY` through the CI platform's secret manager. Do not print
+environment variables or pass the key as a command-line argument. Limit which
+steps and child processes inherit the secret.
+
 ```bash
-export NUELINK_API_KEY="YOUR_API_KEY"
 nuelink-cli auth:status
 nuelink-cli auth:validate
 nuelink-cli --json brands --per-page 5 --page 1

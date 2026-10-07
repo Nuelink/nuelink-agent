@@ -1,6 +1,6 @@
 # Nuelink MCP Distribution Runbook
 
-This repository contains the plugin metadata and review cases used to distribute the production Nuelink MCP server. The canonical endpoint is `https://mcp.nuelink.com/mcp` and the 17 published tool names are treated as a stable API contract.
+This repository contains the plugin metadata and review cases used to distribute the production Nuelink MCP server. The canonical endpoint is `https://mcp.nuelink.com/mcp` and the 18 published tool names are treated as a stable API contract.
 
 ## Canonical Listing Metadata
 
@@ -36,6 +36,7 @@ Run `npm run validate:all` before packaging. The contract validator checks manif
 | Create collection and upload media | No | No | No | They add reversible resources inside the connected account. |
 | Create automation | No | No | Yes | It creates account state and may fetch content from a public feed URL. |
 | Create or schedule a post | No | Yes | Yes | Some modes publish content to public social platforms; draft is the default. |
+| Move posts between collections | No | No | No | It atomically changes collection membership inside the connected account. |
 | Delete post | No | Yes | No | It permanently deletes account data but does not contact an open-ended external destination. |
 
 These are tool-level declarations, so the most consequential supported mode determines the annotation. For example, post creation remains destructive even though an omitted `publishMode` safely defaults to `DRAFT`, because the same tool also supports `IMMEDIATE` publication.

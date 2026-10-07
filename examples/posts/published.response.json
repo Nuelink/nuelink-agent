@@ -19,7 +19,13 @@
       "results": {
         "likes": 42,
         "comments": 5,
-        "shares": 3
+        "shares": 3,
+        "views": 1200,
+        "saves": 18,
+        "engagement": 68,
+        "clicks": 27,
+        "impressions": 1540,
+        "reach": 1310
       }
     }
   ],

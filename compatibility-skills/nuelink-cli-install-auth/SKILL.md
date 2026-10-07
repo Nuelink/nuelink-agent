@@ -14,7 +14,7 @@ Use `nuelink-cli-setup` for full setup and auth workflows.
 Use this alias when the request is only about install, login, logout, or checking the active account.
 
 ```bash
-npm install -g @nuelink/nuelink-cli
+npm install -g @nuelink/nuelink-cli@1.5.0
 nuelink-cli --version
 printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
 nuelink-cli auth:status
@@ -39,14 +39,14 @@ Reference: `./references/auth-flow.md`
 ## Requirements
 
 - Node.js 18.17 or higher
-- Nuelink CLI 1.4.5 or higher
+- Nuelink CLI 1.5.0 or higher
 
 ## Install
 
 ### Global install
 
 ```bash
-npm install -g @nuelink/nuelink-cli
+npm install -g @nuelink/nuelink-cli@1.5.0
 ```
 
 ### Run without global install
@@ -96,7 +96,7 @@ The CLI resolves credentials in this order:
 - Windows: `%USERPROFILE%/.nuelink-cli/config.json`
 - macOS/Linux: `$HOME/.nuelink-cli/config.json`
 
-CLI 1.4.5 stores saved credentials in encrypted fields and automatically
+CLI 1.5.0 stores saved credentials in encrypted fields and automatically
 migrates legacy plaintext configuration. Treat this file as CLI-managed and do
 not edit or copy it between machines.
 
@@ -111,5 +111,5 @@ nuelink-cli me
 ## Safety Notes
 
 - Do not echo raw API keys in logs, screenshots, or chat transcripts.
-- Prefer temporary shell environment variables in CI.
+- Inject secrets from the CI secret manager; avoid environment dumps, command-line arguments, and unnecessary child-process inheritance.
 - If a key may have leaked, rotate it before continuing.

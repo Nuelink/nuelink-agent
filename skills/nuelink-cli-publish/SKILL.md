@@ -1,6 +1,6 @@
 ---
 name: nuelink-cli-publish
-description: Upload media and list, draft, queue, schedule, update, delete, or review published posts with nuelink-cli. Resolve targets, default ambiguity to DRAFT, preview every mutation, and explicitly confirm uploads, non-draft posts, updates, and deletion; do not call REST or MCP directly.
+description: Upload media and list, draft, queue, schedule, move, update, delete, or review published posts with nuelink-cli. Resolve targets, default ambiguity to DRAFT, preview every mutation, and explicitly confirm uploads, non-draft posts, moves, updates, and deletion; do not call REST or MCP directly.
 ---
 
 # Nuelink CLI Publish
@@ -11,7 +11,7 @@ Read [the publish workflow](references/publish-workflow.md) for scheduling and c
 
 ## How To Use
 
-Use this skill for media uploads and all post discovery, creation, schedule, update, deletion, and results workflows.
+Use this skill for media uploads and all post discovery, creation, move, schedule, update, deletion, and results workflows.
 
 ```bash
 nuelink-cli media:upload --brand-id BRAND_ID --file ./assets/image.jpg --dry-run
@@ -27,8 +27,9 @@ nuelink-cli published-posts --brand-id BRAND_ID
 3. Validate payload fields and publish mode by running the complete post command with `--dry-run`.
 4. If intent is ambiguous, use `publishMode=DRAFT`.
 5. Require explicit confirmation for `QUEUE`, `SCHEDULE`, or `IMMEDIATE`.
-6. Require separate explicit confirmation immediately before any `posts:delete` execution.
+6. Require explicit confirmation immediately before `posts:move` or `posts:update` execution. Require separate explicit confirmation immediately before any `posts:delete` execution.
 7. Run the same command without `--dry-run` and return affected resource IDs.
+8. Read posts back using `posts`, `brand-posts`, or `published-posts` as appropriate; compare the status, type, schedule, and IDs that the API exposes. Do not claim fields absent from read-back were verified.
 
 ## Commands
 
@@ -88,13 +89,25 @@ nuelink-cli posts:update \
   --brand-id BRAND_ID \
   --post-id POST_ID \
   --publish-mode SCHEDULE \
-  --scheduled-at "2026-10-12 09:00:00" \
+  --scheduled-at "BRAND_LOCAL_YYYY-MM-DD_HH:mm:ss" \
   --dry-run
 
 nuelink-cli posts:update \
   --brand-id BRAND_ID \
   --post-id POST_ID \
   --queue-position FRONT \
+  --dry-run
+```
+
+Preview moving posts between collections. It is atomic: all supplied posts must
+be in the source collection, and no more than 100 post IDs can be moved.
+
+```bash
+nuelink-cli posts:move \
+  --brand-id BRAND_ID \
+  --source-collection-id SOURCE_COLLECTION_ID \
+  --destination-collection-id DESTINATION_COLLECTION_ID \
+  --post-ids "POST_ID_1,POST_ID_2" \
   --dry-run
 ```
 
@@ -116,4 +129,5 @@ the account has enabled sensitive AI actions.
 - If the post content is unclear, use `DRAFT`.
 - If the post is not a draft, ask for explicit confirmation.
 - Confirm post updates and deletions against the exact brand and post IDs.
+- Confirm moves against the exact brand, source collection, destination collection, and post IDs.
 - Use the smallest command that gets the job done.

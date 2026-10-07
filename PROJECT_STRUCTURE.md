@@ -12,11 +12,17 @@ Overview of what each top-level folder and file is responsible for.
 |-- examples/
 |   |-- README.md
 |   `-- <domain>/*.json
-|-- agents/
-|   `-- openai.yaml
 |-- scripts/
 |   `-- validate-skills.mjs
 |   `-- validate-behavior.mjs
+|   `-- validate-contracts.mjs
+|-- compatibility-skills/
+|   `-- <legacy-skill-name>/
+|-- .claude-plugin/
+|   `-- plugin.json
+|-- .codex-plugin/
+|   `-- plugin.json
+|-- .mcp.json
 |-- tests/
 |   `-- behavior/
 |       `-- fixtures.json
@@ -33,12 +39,13 @@ Overview of what each top-level folder and file is responsible for.
 |-- PROJECT_STRUCTURE.md
 |-- API_ENDPOINTS.md
 |-- README.md
-`-- SECURITY.md
+|-- SECURITY.md
+`-- DISTRIBUTION.md
 ```
 
 ## Notes
 
-- `skills/` contains canonical and legacy alias skills.
+- `skills/` contains the three canonical installable skills; `compatibility-skills/` contains nine opt-in aliases.
 - Canonical skills are `nuelink-cli-setup`, `nuelink-cli-manage`, and `nuelink-cli-publish`.
 - `skills/<skill>/references/` keeps each installed skill self-contained.
 - `examples/` contains sanitized request/response JSON used by skills.
@@ -47,3 +54,4 @@ Overview of what each top-level folder and file is responsible for.
 - `scripts/validate-skills.mjs` enforces metadata and structure consistency.
 - `scripts/validate-behavior.mjs` enforces safety and routing behavior expectations.
 - CI runs markdown lint, skill validation, and behavior validation on pull requests.
+- CI also checks installer behavior, manifests/contracts, and the Agent Skills reference validator.

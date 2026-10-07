@@ -53,6 +53,7 @@ and `per_page` (`1` through `100`, default `25`).
 | `/api/public/v1/brands/:brand_id/collections/:collection_id/posts` | `GET` | List posts |
 | `/api/public/v1/brands/:brand_id/collections/:collection_id/posts` | `POST` | Create post |
 | `/api/public/v1/brands/:brand_id/posts` | `GET` | List posts across all brand collections |
+| `/api/public/v1/brands/:brand_id/posts/move` | `PATCH` | Atomically move up to 100 posts between collections |
 | `/api/public/v1/brands/:brand_id/posts/:post_id` | `PATCH` | Reschedule, re-queue, draft, or reposition a post |
 | `/api/public/v1/brands/:brand_id/posts/:post_id` | `DELETE` | Permanently delete a post (sensitive action) |
 | `/api/public/v1/brands/:brand_id/published-posts` | `GET` | List per-channel published results and engagement |
@@ -66,6 +67,10 @@ Brand post listing also accepts `collection_id` and `view` (`QUEUE`,
 `SCHEDULED`, `DRAFT`, or `PUBLISHED`). Published results accept status,
 collection, channel, source post, type, text-search, publication-time, and
 engagement-sort filters.
+
+Moving posts requires source and destination collection IDs plus 1–100 unique
+post IDs. Every post must belong to the source collection or the API moves none
+of them.
 
 ## Schedule
 

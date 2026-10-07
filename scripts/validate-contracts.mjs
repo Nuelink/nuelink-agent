@@ -140,6 +140,7 @@ const mutationCommands = [
   "media:upload",
   "posts:create",
   "posts:add-json",
+  "posts:move",
   "posts:update",
   "posts:delete",
 ];
@@ -177,6 +178,7 @@ const dryRuns = [
   ["--dry-run", "media:upload", "--brand-id", "1", "--file", mediaPath],
   ["--dry-run", "posts:create", "--brand-id", "1", "--collection-id", "2", "--caption", "Preview", "--publish-mode", "DRAFT"],
   ["--dry-run", "posts:add-json", "--brand-id", "1", "--collection-id", "2", "--payload", payloadPath],
+  ["--dry-run", "posts:move", "--brand-id", "1", "--source-collection-id", "2", "--destination-collection-id", "3", "--post-ids", "4,5"],
   ["--dry-run", "posts:update", "--brand-id", "1", "--post-id", "3", "--queue-position", "FRONT"],
   ["--dry-run", "posts:delete", "--brand-id", "1", "--post-id", "3"],
 ];

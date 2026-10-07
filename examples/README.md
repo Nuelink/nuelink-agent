@@ -16,3 +16,4 @@ because that is the value accepted by post creation.
 
 - Replace tokens before running API calls in your environment.
 - Keep the response structure accurate and only swap placeholder values.
+- `BRAND_LOCAL_FUTURE_YYYY-MM-DD_HH:mm:ss` is a placeholder, not a sendable timestamp. Resolve and confirm a brand-local time at least 10 minutes ahead before using it.
