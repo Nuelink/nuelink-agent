@@ -8,7 +8,7 @@ The format is based on Keep a Changelog, and this project follows Semantic Versi
 
 ### Fixed
 
-- Corrected the CLI 1.4.5 registry integrity in the source lockfile so clean installs match the registry artifact.
+- Corrected the CLI 1.5.0 registry integrity in the source lockfile so clean installs match the registry artifact.
 - Strengthened publish workflows with mandatory timezone confirmation, the 10-minute scheduling lead time, and post-mutation read-back guidance.
 - Clarified Node.js requirements, secret-manager use, saved credential protection, portable Skill installation, and media processing delays.
 - Aligned package and plugin metadata at version 1.1.1.
