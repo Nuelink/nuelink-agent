@@ -61,6 +61,9 @@ nuelink-cli posts:add-json --brand-id SAMPLE_BRAND_ID --collection-id SAMPLE_COL
 
 ```bash
 nuelink-cli posts:update --brand-id SAMPLE_BRAND_ID --post-id SAMPLE_POST_ID \
+  --caption "Updated post text" --dry-run
+
+nuelink-cli posts:update --brand-id SAMPLE_BRAND_ID --post-id SAMPLE_POST_ID \
   --queue-position FRONT --dry-run
 
 nuelink-cli posts:move --brand-id SAMPLE_BRAND_ID \

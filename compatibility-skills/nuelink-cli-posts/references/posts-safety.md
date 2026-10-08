@@ -1,5 +1,7 @@
 # Posts Safety Reference
 
+`posts:update --caption` edits the text of a non-poll, unpublished post without changing its media. Caption length is 1–3000 characters.
+
 ## Publish Modes
 
 - `DRAFT`

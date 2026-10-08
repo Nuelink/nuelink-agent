@@ -11,7 +11,7 @@ Read [the publish workflow](references/publish-workflow.md) for scheduling and c
 
 ## How To Use
 
-Use this skill for media uploads and all post discovery, creation, move, schedule, update, deletion, and results workflows.
+Use this skill for media uploads and all post discovery, creation, caption edits, move, schedule, update, deletion, and results workflows.
 
 ```bash
 nuelink-cli media:upload --brand-id BRAND_ID --file ./assets/image.jpg --dry-run
@@ -81,6 +81,19 @@ nuelink-cli posts:add-json \
   --payload ./post.json \
   --dry-run
 ```
+
+Preview a caption edit:
+
+```bash
+nuelink-cli posts:update \
+  --brand-id BRAND_ID \
+  --post-id POST_ID \
+  --caption "Updated post text" \
+  --dry-run
+```
+
+Caption edits apply to unpublished, non-poll posts and do not change media.
+You can combine `--caption` with a supported lifecycle change when requested.
 
 Preview rescheduling or moving a queued post:
 

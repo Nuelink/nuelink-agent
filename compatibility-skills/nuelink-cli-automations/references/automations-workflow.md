@@ -17,8 +17,10 @@ nuelink-cli automations:create \
 
 - `GET /api/public/v1/brands/:brand_id/automations`
 - `POST /api/public/v1/brands/:brand_id/automations`
+- `PATCH /api/public/v1/brands/:brand_id/automations/:automation_id`
 
 ## Guardrail
 
 - Run the complete create command with `--dry-run` before asking for confirmation.
 - Do not create the automation until brand, collection, and feed URL are confirmed; then re-run without `--dry-run`.
+- Preview pause or activate requests with `automations:update-status --dry-run`, confirm the selected automation and target status, then verify through the automation list.

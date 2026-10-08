@@ -27,6 +27,7 @@
 - Never copy the placeholder literally or use a fixed calendar date in examples.
 - Run every upload or post mutation with `--dry-run` before requesting confirmation.
 - Use `schedule` and `brand-posts` to resolve the current state before moving or updating a queued or scheduled post.
+- `posts:update --caption` changes the text of a non-poll, unpublished post without changing its media; captions must contain 1–3000 characters.
 - If intent is ambiguous, default to `DRAFT`.
 - Require explicit confirmation for `QUEUE`, `SCHEDULE`, and `IMMEDIATE`.
 - Require explicit confirmation for `posts:update`; repeat the exact previewed command after confirmation.

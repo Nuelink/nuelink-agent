@@ -6,7 +6,7 @@ The CLI requires Node.js 18.17 or later. Install the fixed release so base URL
 trust checks and raw JSON null handling are available.
 
 ```bash
-npm install -g @nuelink/nuelink-cli@1.5.0
+npm install -g @nuelink/nuelink-cli@1.6.0
 nuelink-cli --version
 printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
 nuelink-cli auth:status

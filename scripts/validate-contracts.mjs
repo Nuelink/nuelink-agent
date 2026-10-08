@@ -136,7 +136,13 @@ for (const reviewCase of reviewCases.negative) {
 
 const mutationCommands = [
   "collections:create",
+  "collections:update",
+  "collections:add-channel",
+  "collections:remove-channel",
+  "collections:add-queue",
+  "collections:delete-queue",
   "automations:create",
+  "automations:update-status",
   "media:upload",
   "posts:create",
   "posts:add-json",
@@ -174,12 +180,18 @@ fs.writeFileSync(mediaPath, Buffer.from([0xff, 0xd8, 0xff, 0xd9]));
 fs.writeFileSync(payloadPath, JSON.stringify({ caption: "Preview", publishMode: "DRAFT" }));
 const dryRuns = [
   ["--dry-run", "collections:create", "--brand-id", "1", "--title", "Preview"],
+  ["--dry-run", "collections:update", "--brand-id", "1", "--collection-id", "2", "--status", "PAUSED"],
+  ["--dry-run", "collections:add-channel", "--brand-id", "1", "--collection-id", "2", "--channel-id", "3"],
+  ["--dry-run", "collections:remove-channel", "--brand-id", "1", "--collection-id", "2", "--channel-id", "3"],
+  ["--dry-run", "collections:add-queue", "--brand-id", "1", "--collection-id", "2", "--date", "Mon 09:30"],
+  ["--dry-run", "collections:delete-queue", "--brand-id", "1", "--collection-id", "2", "--queue-id", "4"],
   ["--dry-run", "automations:create", "--brand-id", "1", "--collection-id", "2", "--feed-url", "https://example.com/feed.xml", "--import-as-type", "IMAGE", "--type", "RSS", "--name", "Preview"],
+  ["--dry-run", "automations:update-status", "--brand-id", "1", "--automation-id", "5", "--status", "PAUSED"],
   ["--dry-run", "media:upload", "--brand-id", "1", "--file", mediaPath],
   ["--dry-run", "posts:create", "--brand-id", "1", "--collection-id", "2", "--caption", "Preview", "--publish-mode", "DRAFT"],
   ["--dry-run", "posts:add-json", "--brand-id", "1", "--collection-id", "2", "--payload", payloadPath],
   ["--dry-run", "posts:move", "--brand-id", "1", "--source-collection-id", "2", "--destination-collection-id", "3", "--post-ids", "4,5"],
-  ["--dry-run", "posts:update", "--brand-id", "1", "--post-id", "3", "--queue-position", "FRONT"],
+  ["--dry-run", "posts:update", "--brand-id", "1", "--post-id", "3", "--caption", "Updated from agent", "--queue-position", "FRONT"],
   ["--dry-run", "posts:delete", "--brand-id", "1", "--post-id", "3"],
 ];
 for (const args of dryRuns) {

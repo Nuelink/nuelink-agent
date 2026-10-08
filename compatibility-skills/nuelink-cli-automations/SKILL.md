@@ -1,6 +1,6 @@
 ---
 name: nuelink-cli-automations
-description: List automations or safely create feed-based automations with nuelink-cli. Use for RSS/feed imports and automation setup; confirm targets and explicit create intent, and do not use for direct API calls.
+description: List, create, pause, or activate feed-based automations with nuelink-cli. Resolve targets, preview changes, and require explicit confirmation; do not use for direct API calls.
 ---
 
 # Nuelink CLI Automations
@@ -9,7 +9,7 @@ Compatibility alias: this flow is now consolidated under `nuelink-cli-manage`.
 
 ## How To Use
 
-Use this alias when you need to inspect or create feed-based automations.
+Use this alias when you need to inspect, create, pause, or activate feed-based automations.
 
 ```bash
 nuelink-cli automations --brand-id BRAND_ID
@@ -33,6 +33,8 @@ Reference: `./references/automations-workflow.md`
 4. Require explicit user confirmation before `automations:create`.
 5. Run the same command without `--dry-run`, then return the automation ID plus enabled status.
 
+For a status change, resolve the automation from the selected brand, preview the exact status with `automations:update-status --dry-run`, get explicit confirmation, then run the same command without `--dry-run` and verify with `automations`.
+
 ## List Automations
 
 ```bash
@@ -54,6 +56,16 @@ nuelink-cli automations:create \
   --dry-run
 ```
 
+## Pause or Activate Automation
+
+```bash
+nuelink-cli automations:update-status \
+  --brand-id SAMPLE_BRAND_ID \
+  --automation-id SAMPLE_AUTOMATION_ID \
+  --status PAUSED \
+  --dry-run
+```
+
 ## Examples
 
 - Create request payload: `examples/automations/create.request.json`
@@ -63,6 +75,7 @@ nuelink-cli automations:create \
 
 - List endpoint: `GET /api/public/v1/brands/:brand_id/automations`
 - Create endpoint: `POST /api/public/v1/brands/:brand_id/automations`
+- Status endpoint: `PATCH /api/public/v1/brands/:brand_id/automations/:automation_id`
 - Success codes: `200` for list, `201` for create
 
 ## Notes

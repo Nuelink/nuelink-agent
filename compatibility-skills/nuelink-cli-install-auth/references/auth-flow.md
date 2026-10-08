@@ -3,7 +3,7 @@
 ## Safe Setup Sequence
 
 ```bash
-npm install -g @nuelink/nuelink-cli@1.5.0
+npm install -g @nuelink/nuelink-cli@1.6.0
 nuelink-cli --version
 printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
 nuelink-cli auth:status
