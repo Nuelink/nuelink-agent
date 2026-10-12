@@ -4,6 +4,14 @@
     {
       "id": 6001,
       "collectionId": 2001,
+      "channels": [
+        {
+          "id": 501,
+          "name": "Acme on Instagram",
+          "status": "ACTIVE",
+          "type": "Instagram"
+        }
+      ],
       "title": null,
       "body": "Sample published post body for documentation examples.",
       "media": [

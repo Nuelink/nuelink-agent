@@ -39,6 +39,10 @@ and `per_page` (`1` through `100`, default `25`).
 | `/api/public/v1/brands/:brand_id/automations` | `POST` | Create automation |
 | `/api/public/v1/brands/:brand_id/automations/:automation_id` | `PATCH` | Pause or activate automation |
 
+Automation list and create responses include `loadOldPosts`,
+`addPostsAsDraft`, and `refreshRate`. Older records can return null for
+`loadOldPosts` when its initial-import value was not recorded.
+
 ## Channels
 
 | Endpoint | Method | Purpose |
@@ -72,6 +76,9 @@ must not precede `created_from`.
 
 Collection and brand post listings accept `view` (`QUEUE`, `SCHEDULED`,
 `DRAFT`, or `PUBLISHED`). Brand post listing also accepts `collection_id`.
+Each post response includes effective `channels` summaries: post-targeted
+channels when set, otherwise the channels assigned to its collection. The
+create-post request does not accept a per-post channel selector.
 Published results accept status,
 collection, channel, source post, type, text-search, publication-time, and
 engagement-sort filters.

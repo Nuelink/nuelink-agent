@@ -33,6 +33,7 @@
 - Require explicit confirmation for `posts:update`; repeat the exact previewed command after confirmation.
 - Require explicit confirmation for `posts:move`; confirm the brand, source and destination collection IDs, and every post ID. Moves are atomic, limited to 100 unique post IDs, and both collections must be in the same brand.
 - After create/update, read the exact post back with its brand and post IDs and verify exposed status, post type, and schedule fields. Some accepted fields (including links, alt text, comments, and platform options) may not be included in list responses; do not claim those were independently verified.
+- Read the returned `channels` summaries to verify effective post destinations. They show targeted channels when configured, otherwise the collection's assigned channels.
 - If the goal is only to stop a pending publication, prefer updating the post to `DRAFT`; do not delete it unless the user explicitly requested deletion.
 - After media upload, allow for processing delay and retry a read-only media listing before treating the new upload as missing.
 - If a post mutation times out or returns a server error, inspect the exact brand and collection/post read endpoints before retrying; do not resend a create blindly because the first request may have succeeded.

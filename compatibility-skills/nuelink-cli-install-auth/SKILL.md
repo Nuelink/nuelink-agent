@@ -14,7 +14,7 @@ Use `nuelink-cli-setup` for full setup and auth workflows.
 Use this alias when the request is only about install, login, logout, or checking the active account.
 
 ```bash
-npm install -g @nuelink/nuelink-cli@1.6.0
+npm install -g @nuelink/nuelink-cli@1.6.2
 nuelink-cli --version
 printf '%s' "$NUELINK_API_KEY" | nuelink-cli auth:login --stdin
 nuelink-cli auth:status
@@ -46,7 +46,7 @@ Reference: `./references/auth-flow.md`
 ### Global install
 
 ```bash
-npm install -g @nuelink/nuelink-cli@1.6.0
+npm install -g @nuelink/nuelink-cli@1.6.2
 ```
 
 ### Run without global install
