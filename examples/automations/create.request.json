@@ -5,5 +5,8 @@
   "feedUrl": "https://example.com/feed.xml",
   "importAsType": "IMAGE",
   "title": "{{title}}",
-  "caption": "New item: {{title}} {{link}}"
+  "caption": "New item: {{title}} {{link}}",
+  "loadOldPosts": false,
+  "addPostsAsDraft": true,
+  "refreshRate": 6
 }

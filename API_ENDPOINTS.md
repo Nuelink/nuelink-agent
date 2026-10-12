@@ -39,9 +39,10 @@ and `per_page` (`1` through `100`, default `25`).
 | `/api/public/v1/brands/:brand_id/automations` | `POST` | Create automation |
 | `/api/public/v1/brands/:brand_id/automations/:automation_id` | `PATCH` | Pause or activate automation |
 
-Automation list and create responses include `loadOldPosts`,
-`addPostsAsDraft`, and `refreshRate`. Older records can return null for
-`loadOldPosts` when its initial-import value was not recorded.
+Automation list and create responses include `addPostsAsDraft` and
+`refreshRate` (hours between checks: 1, 6, 12, or 24). `loadOldPosts` is a
+create input that controls whether existing feed items are imported during
+initial setup; it is not returned by the API.
 
 ## Channels
 

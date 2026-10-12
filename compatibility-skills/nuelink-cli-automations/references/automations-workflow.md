@@ -10,8 +10,14 @@ nuelink-cli automations:create \
   --import-as-type IMAGE \
   --name "Automation Title" \
   --type RSS \
+  --load-old-posts false \
+  --add-posts-as-draft true \
+  --refresh-rate 6 \
   --dry-run
 ```
+
+List and create responses include `addPostsAsDraft` and `refreshRate` (hours:
+1, 6, 12, or 24). `loadOldPosts` is a create input and is not returned.
 
 ## Expected Endpoints
 

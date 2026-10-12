@@ -13,7 +13,6 @@
       "lastRun": 0,
       "title": "{{title}}",
       "caption": "New item: {{title}} {{link}}",
-      "loadOldPosts": false,
       "addPostsAsDraft": false,
       "refreshRate": 24,
       "createdAt": "2024-01-01T00:00:00.000000Z",

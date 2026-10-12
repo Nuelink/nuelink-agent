@@ -78,6 +78,7 @@ nuelink-cli automations:create \
   --caption "{{description}} {{link}}" \
   --load-old-posts false \
   --add-posts-as-draft true \
+  --refresh-rate 6 \
   --dry-run
 ```
 
@@ -91,8 +92,9 @@ nuelink-cli automations:update-status --brand-id BRAND_ID --automation-id AUTOMA
 
 New RSS automations should set `--load-old-posts false` and
 `--add-posts-as-draft true` explicitly. Read the automation back; its list
-response may omit these import-policy settings, so do not claim they were
-independently verified if they are not returned.
+response includes `addPostsAsDraft` and `refreshRate`; compare those returned
+values with the requested settings. The API does not return `loadOldPosts`, so
+verify that input in the dry-run preview before creation.
 
 After the user confirms the preview, repeat the same complete command without
 `--dry-run`. Do not use an abbreviated command that could change the payload.
