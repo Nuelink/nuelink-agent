@@ -13,11 +13,14 @@
 {
   "title": "Post title",
   "caption": "Post body",
-  "autoThreadText": null,
+  "autoThreadText": true,
   "publishMode": "SCHEDULE",
   "scheduledAt": "BRAND_LOCAL_YYYY-MM-DD_HH:mm:ss"
 }
 ```
+
+`autoThreadText` defaults to `true` when omitted. Pass `false` to disable
+automatic text splitting on supported platforms.
 
 ## Guardrails
 

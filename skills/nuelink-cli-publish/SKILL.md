@@ -68,9 +68,14 @@ nuelink-cli posts:create \
   --collection-id COLLECTION_ID \
   --title "Post title" \
   --caption "Post body" \
+  --auto-thread-text true \
   --publish-mode DRAFT \
   --dry-run
 ```
+
+`--auto-thread-text` defaults to `true`; set it to `false` to disable automatic
+text splitting on supported platforms. The JSON/API `autoThreadText` field has
+the same default when omitted.
 
 Create scheduled post with JSON payload:
 

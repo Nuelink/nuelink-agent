@@ -1,7 +1,7 @@
 {
   "title": "Sample Post Title",
   "caption": "Sample post body used for documentation examples.",
-  "autoThreadText": null,
+  "autoThreadText": true,
   "publishMode": "DRAFT",
   "scheduledAt": null,
   "media": [

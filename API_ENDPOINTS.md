@@ -80,6 +80,8 @@ Collection and brand post listings accept `view` (`QUEUE`, `SCHEDULED`,
 Each post response includes effective `channels` summaries: post-targeted
 channels when set, otherwise the channels assigned to its collection. The
 create-post request does not accept a per-post channel selector.
+`autoThreadText` defaults to `true` when omitted; set it to `false` to disable
+automatic text splitting on supported platforms.
 Published results accept status,
 collection, channel, source post, type, text-search, publication-time, and
 engagement-sort filters.

@@ -141,6 +141,7 @@ nuelink-cli posts:create \
 - Moves require a brand, distinct source and destination collections, and 1–100 unique post IDs. The API moves them atomically.
 - For `posts:add-json`, `--payload` must point to valid JSON.
 - `posts:create` supports many platform-specific flags.
+- `autoThreadText` defaults to `true`; use `--auto-thread-text false` or set the JSON field to `false` to disable automatic text splitting.
 - `posts:delete` is irreversible and requires sensitive AI actions to be enabled in Nuelink.
 - Supported publish modes are `DRAFT`, `QUEUE`, `SCHEDULE`, and `IMMEDIATE`.
 - Scheduled values use `YYYY-MM-DD HH:mm:ss`; poll option indexes are
