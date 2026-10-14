@@ -28,6 +28,7 @@ automatic text splitting on supported platforms.
 - Before scheduling, retrieve the selected brand and show its IANA timezone. Resolve the user's requested time in that timezone, show the exact local time and date, and get confirmation before execution. `scheduledAt` is brand-local; listed `postDate` values and post date filters are UTC.
 - Scheduling requires a time at least 10 minutes in the future according to the server. Recheck the resolved time immediately before the confirmed request; do not silently move an expired or too-soon time.
 - Never copy the placeholder literally or use a fixed calendar date in examples.
+- Delayed comments use `--comment-delay <minutes>` with `--comment`; the delay is an integer number of minutes after publishing and must be at least `1`.
 - Run every upload or post mutation with `--dry-run` before requesting confirmation.
 - Use `schedule` and `brand-posts` to resolve the current state before moving or updating a queued or scheduled post.
 - `posts:update --caption` changes the text of a non-poll, unpublished post without changing its media; captions must contain 1–3000 characters.

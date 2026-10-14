@@ -14,7 +14,7 @@ The CLI requires Node.js 18.17 or later. The Skill repository's development
 scripts require Node.js 20 or later.
 
 ```bash
-npm install -g @nuelink/nuelink-cli@1.6.4
+npm install -g @nuelink/nuelink-cli@1.6.5
 ```
 
 ## 3. Authenticate

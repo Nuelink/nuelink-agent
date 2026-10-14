@@ -45,6 +45,7 @@ nuelink-cli posts:add-json \
 - Use `DRAFT` when user intent is ambiguous.
 - Retrieve and display the brand's IANA timezone, resolve the user's time in that zone, and confirm the exact local date/time. `scheduledAt` is brand-local; returned `postDate` and list filters use UTC.
 - Scheduling requires at least 10 minutes' lead time. Recheck immediately before execution; do not silently shift the requested time.
+- Delayed comments use `--comment-delay <minutes>` together with `--comment`; the delay is an integer number of minutes after publishing and must be at least `1`.
 - Read the post back after a mutation and verify the exposed ID, status, type, and schedule. Do not claim fields missing from read-back were verified.
 - Prefer changing a pending post to `DRAFT` when the goal is only to stop publication; use delete only when explicitly requested.
 - Run the complete mutation with `--dry-run` before requesting confirmation.

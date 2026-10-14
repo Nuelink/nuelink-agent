@@ -82,6 +82,9 @@ channels when set, otherwise the channels assigned to its collection. The
 create-post request does not accept a per-post channel selector.
 `autoThreadText` defaults to `true` when omitted; set it to `false` to disable
 automatic text splitting on supported platforms.
+Delayed comments use `comment: { delay, comment }`; `delay` is an integer number
+of minutes after publishing and must be at least `1`. The CLI equivalent is
+`--comment-delay <minutes>` and it must be supplied together with `--comment`.
 Published results accept status,
 collection, channel, source post, type, text-search, publication-time, and
 engagement-sort filters.
