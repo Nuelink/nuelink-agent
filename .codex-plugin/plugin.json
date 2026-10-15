@@ -15,7 +15,7 @@
   "interface": {
     "displayName": "Nuelink",
     "shortDescription": "Plan and publish social posts",
-    "longDescription": "Manage social content in your connected Nuelink account. Discover brands, channels, collections, schedules, and media; create drafts and automations; schedule or publish posts only when requested; and review engagement results. Content editing and account administration are not supported.",
+    "longDescription": "Manage social content in your connected Nuelink account. Discover brands, channels, collections, schedules, and media; create drafts and automations; schedule or publish posts only when requested; and review engagement results. Caption editing is supported for unpublished non-poll posts; media/options editing and account administration are not supported.",
     "developerName": "Nuelink",
     "category": "Productivity",
     "capabilities": [

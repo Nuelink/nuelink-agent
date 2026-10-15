@@ -14,8 +14,10 @@ because that is the value accepted by post creation.
 
 ## Usage
 
-Post list fixtures include effective channel summaries. Automation list fixtures
-include the initial-import setting, draft behavior, and feed refresh interval.
+Post list fixtures include effective channel summaries. The automation creation
+fixture includes the `loadOldPosts` input. The automation list fixture exposes
+the saved draft behavior (`addPostsAsDraft`) and feed refresh interval
+(`refreshRate`); `loadOldPosts` is not returned in list responses.
 
 - Replace tokens before running API calls in your environment.
 - Keep the response structure accurate and only swap placeholder values.
